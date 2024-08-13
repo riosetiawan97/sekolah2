@@ -1,24 +1,58 @@
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Absen Siswa
-        <small></small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Absen Siswa</li>
-      </ol>
-    </section>
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+	<!--begin::Toolbar-->
+	<div class="toolbar" id="kt_toolbar">
+		<!--begin::Container-->
+		<div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
+			<!--begin::Page title-->
+			<div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
+				<!--begin::Title-->
+				<h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Student Attendance</h1>
+				<!--end::Title-->
+                <!--begin::Separator-->
+                <span class="h-20px border-gray-200 border-start mx-4"></span>
+                <!--end::Separator-->
+                <!--begin::Breadcrumb-->
+                <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-muted">
+                        <a href="<?php echo base_url().'admin/dashboard'?>" class="text-muted text-hover-primary">Home</a>
+                    </li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item">
+                        <span class="bullet bg-gray-200 w-5px h-2px"></span>
+                    </li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-muted">Student Attendance</li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item">
+                        <span class="bullet bg-gray-200 w-5px h-2px"></span>
+                    </li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-dark">List Student Attendance</li>
+                    <!--end::Item-->
+                </ul>
+                <!--end::Breadcrumb-->
+			</div>
+			<!--end::Page title-->
+		</div>
+		<!--end::Container-->
+	</div>
+	<!--end::Toolbar-->
+	<!--begin::Post-->
+    <div class="post d-flex flex-column-fluid" id="kt_post">
 
-    <!-- Main content -->
-    <section class="content">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="box">
-
-          <div class="box">
-            <!-- /.box-header -->
-            <div class="box-body">
+        <div id="kt_content_container" class="container-xxl">
+            <div class="row g-5 g-xxl-8">
+                <div class="col-xxl-12">
+            <!-- Main content -->
+                    <div class="card card-xxl-stretch mb-xl-8">
+                                <!--begin::Body-->
+                        <div class="card-body py-3">
+                    <!-- /.box-header -->
               <table id="example1" class="table table-striped" style="font-size:12px;">
                 <div class="row">			
 					<form action="<?php echo site_url('admin/siswa/absen');?>" method="post">
@@ -36,19 +70,19 @@
 						<div class="col-md-4">						
 							<label>Submit</label>
 							<div class="input-group date">
-								<button type="submit" class="btn btn-default btn-submit">SUBMIT</button>
+								<button type="submit" class="btn btn-primary btn-submit">Submit</button>
 							</div>
 						</div>
 					</form>					
 				</div>
                 <thead>
                 <tr>
-					<th style="width:70px;">#Tanggal</th>
-                    <th>Jam</th>
-                    <th>Nama</th>
-                    <th>Kelas</th>
-                    <th>Jurusan</th>
-                    <th style="text-align:right;">Aksi</th>
+					<th style="width:70px;">#Date</th>
+                    <th>Time</th>
+                    <th>Name</th>
+                    <th>Class</th>
+                    <th>Major</th>
+                    <th style="text-align:right;">Action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -70,21 +104,30 @@
                   <td><?php echo $kelas;?></td>
                   <td><?php echo $jurusan;?></td>
                   <td style="text-align:right;">
-                        <a class="btn" data-toggle="modal" data-target="#ModalHapus<?php echo $id;?>"><span class="fa fa-trash"></span></a>
+                    <a class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm" data-bs-toggle="modal" data-bs-target="#ModalHapus<?php echo $id;?>">
+                        <!--begin::Svg Icon | path: icons/duotune/general/gen027.svg-->
+                        <span class="svg-icon svg-icon-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="black" />
+                                <path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="black" />
+                                <path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="black" />
+                            </svg>
+                        </span>
+                        <!--end::Svg Icon-->
+                    </a>
                   </td>
                 </tr>
 				<?php endforeach;?>
                 </tbody>
               </table>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
         </div>
-        <!-- /.col -->
-      </div>
-      <!-- /.row -->
-    </section>
+    </div>
+	<!--end::Post-->
+</div>
 
 <?php foreach ($data->result_array() as $i) :
   $id=$i['id'];
@@ -98,18 +141,29 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
-                <h4 class="modal-title" id="myModalLabel">Hapus Absen Siswa</h4>
+              <!--begin::Close-->
+              <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                <span class="svg-icon svg-icon-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
+                    <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
+                  </svg>
+                </span>
+                <!--end::Svg Icon-->
+              </div>
+              <!--end::Close-->
+              <h4 class="modal-title" id="myModalLabel">Delete Student Attendance</h4>
             </div>
             <form class="form-horizontal" action="<?php echo base_url().'admin/siswa/hapus_absen'?>" method="post" enctype="multipart/form-data">
             <div class="modal-body">
               <input type="hidden" name="id" value="<?php echo $id;?>"/>
-                    <p>Apakah Anda yakin mau menghapus data ini?</p>
+                    <p>Are you sure want to delete ?</p>
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary btn-flat" id="simpan">Hapus</button>
+                <button type="button" class="btn btn-default btn-flat" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary btn-flat" id="simpan">Delete</button>
             </div>
             </form>
         </div>
@@ -163,7 +217,7 @@
       showInputs: true
     });
 
-  });
+  /*});*/
 </script>
 <?php if($this->session->flashdata('msg')=='error'):?>
         <script type="text/javascript">

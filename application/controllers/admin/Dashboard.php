@@ -11,7 +11,7 @@ class Dashboard extends CI_Controller{
 	}
 	function index(){
 		if($this->session->userdata('akses')=='1'){
-			$x['visitor'] = $this->m_pengunjung->statistik_pengujung();
+			$x['visitor'] = $this->m_pengunjung->visitor_this_year();
 			$x['setup']=$this->m_setup->get_setup()->row();
 			$judul_website=$x['setup']->judul_website;
 			//$this->load->view('admin/v_dashboard',$x);
