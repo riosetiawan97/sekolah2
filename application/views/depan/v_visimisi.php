@@ -32,7 +32,7 @@
                 </li>
                 <!--end::Item-->
                 <!--begin::Item-->
-                <li class="breadcrumb-item text-dark">About Us</li>
+                <li class="breadcrumb-item text-dark">Visi Misi</li>
                 <!--end::Item-->
             </ul>
             <!--end::Breadcrumb-->
@@ -62,14 +62,14 @@
                                 <!--begin::Item-->
                                 <div class="menu-item mb-1">
                                     <!--begin::Link-->
-                                    <a href="<?php echo site_url('about');?>" class="menu-link py-3 active">About Us</a>
+                                    <a href="<?php echo site_url('about');?>" class="menu-link py-3">About Us</a>
                                     <!--end::Link-->
                                 </div>
                                 <!--end::Item-->
                                 <!--begin::Item-->
                                 <div class="menu-item mb-1">
                                     <!--begin::Link-->
-                                    <a href="<?php echo site_url('visi_misi');?>" class="menu-link py-3">Vision & Mision</a>
+                                    <a href="<?php echo site_url('visi_misi');?>" class="menu-link py-3 active">Vision & Mision</a>
                                     <!--end::Link-->
                                 </div>
                                 <!--end::Item-->
@@ -84,20 +84,23 @@
                         <!--begin::Extended content-->
                         <div class="mb-13">
                             <!--begin::Content-->
-                            <div class="mb-15">														
-                                <section class="welcome_about">
+                            <div class="mb-15">	
+                                <section class="clearfix about about-style2">
                                     <div class="container">
                                         <div class="row">
-                                            <div class="col-md-5">
-                                                <img src="<?php echo base_url().'assets/images/'.$setup->gambarabout;?>" class="img-fluid" alt="#">
+                                            <div class="col-md-4">
+                                                <img src="<?php echo base_url().'assets/images/'.$setup->gambarvisimisi?>" class="img-fluid about-img" alt="#">
                                             </div>
-                                            <div class="col-md-7">
-                                                <h2>Kata Sambutan</h2>
-                                                <p><?php echo $setup->about;?>
-                                                </p>
-                                            </div>
+                                            <div class="col-md-8">
+                                            <h2>Vision</h2>
+                                            <p><?php echo $setup->visi;?></p>
+                                            <br>
+                                            <h2>Mision</h2>
+                                            <p><?php echo $setup->misi;?></p>
+
                                             </div>
                                         </div>
+                                    </div>
                                 </section>
                             </div>
                             <!--end::Content-->

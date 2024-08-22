@@ -10,6 +10,6 @@ class visi_misi extends CI_Controller{
 		$judul_website=$x['setup']->judul_website;
 		//$this->load->view('depan/v_visi_misi');
 		$x['title']="$judul_website | Visi Misi";
-		$this->template->load('template_depan', 'depan/v_visi_misi', $x);
+		$this->template->load('template_depan', 'depan/v_visimisi', $x);
 	}
 }
