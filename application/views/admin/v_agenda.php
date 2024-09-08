@@ -158,66 +158,72 @@
                     <form class="form-horizontal" action="<?php echo base_url().'admin/agenda/simpan_agenda'?>" method="post" enctype="multipart/form-data">
                     <div class="modal-body">
 
-                            <div class="form-group mb-4">
-                                <label for="inputUserName" class="col-sm-4 control-label">Agenda Name</label>
-                                <div class="col-sm-7">
-                                  <input type="text" name="xnama_agenda" class="form-control" id="inputUserName" placeholder="Agenda Name" required>
-                                </div>
+                        <div class="form-group mb-4">
+                            <label for="inputUserName" class="col-sm-4 control-label">Agenda Name</label>
+                            <div class="col-sm-7">
+                                <input type="text" name="xnama_agenda" class="form-control" id="inputUserName" placeholder="Agenda Name" required>
                             </div>
-                            <div class="form-group mb-4">
-                                <label for="inputUserName" class="col-sm-4 control-label">Description</label>
-                                <div class="col-sm-7">
-                                  <textarea class="form-control" rows="3" name="xdeskripsi" placeholder="Description ..." required></textarea>
-                                </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="inputUserName" class="col-sm-4 control-label">Event Picture</label>
+                            <div class="col-sm-12">
+                                <input type="file" name="filefoto" />
                             </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="inputUserName" class="col-sm-4 control-label">Description</label>
+                            <div class="col-sm-7">
+                                <textarea class="form-control" rows="3" name="xdeskripsi" placeholder="Description ..." required></textarea>
+                            </div>
+                        </div>
 
-                            <div class="form-group mb-4">
-                              <label for="inputUserName" class="col-sm-4 control-label">Date From</label>
-                              <div class="col-sm-7">
-                                <div class="input-group date">
-                                  <div class="input-group-addon">
-                                    <i class="fa fa-calendar"></i>
-                                  </div>
-                                  <input type="text" name="xmulai" class="form-control pull-right" id="datepicker" required>
+                        <div class="form-group mb-4">
+                            <label for="inputUserName" class="col-sm-4 control-label">Date From</label>
+                            <div class="col-sm-7">
+                            <div class="input-group date">
+                                <div class="input-group-addon">
+                                <i class="fa fa-calendar"></i>
                                 </div>
-                              </div>
-                              <!-- /.input group -->
+                                <input type="text" name="xmulai" class="form-control pull-right" id="datepicker" required>
                             </div>
-                            <!-- /.form group -->
+                            </div>
+                            <!-- /.input group -->
+                        </div>
+                        <!-- /.form group -->
 
-                            <!-- Date range -->
-                            <div class="form-group mb-4">
-                             <label for="inputUserName" class="col-sm-4 control-label">Date To</label>
-                              <div class="col-sm-7">
-                                <div class="input-group date">
-                                  <div class="input-group-addon">
-                                    <i class="fa fa-calendar"></i>
-                                  </div>
-                                  <input type="text" name="xselesai" class="form-control pull-right" id="datepicker2" required>
+                        <!-- Date range -->
+                        <div class="form-group mb-4">
+                            <label for="inputUserName" class="col-sm-4 control-label">Date To</label>
+                            <div class="col-sm-7">
+                            <div class="input-group date">
+                                <div class="input-group-addon">
+                                <i class="fa fa-calendar"></i>
                                 </div>
-                              </div>
-                              <!-- /.input group -->
+                                <input type="text" name="xselesai" class="form-control pull-right" id="datepicker2" required>
                             </div>
-                            <!-- /.form group -->
-                            <div class="form-group mb-4">
-                                <label for="inputUserName" class="col-sm-4 control-label">Place</label>
-                                <div class="col-sm-7">
-                                  <input type="text" name="xtempat" class="form-control" id="inputUserName" placeholder="Place" required>
-                                </div>
                             </div>
-                            <div class="form-group mb-4">
-                                <label for="inputUserName" class="col-sm-4 control-label">Time</label>
-                                <div class="col-sm-7">
-                                    <input type="text" name="xwaktu" class="form-control" id="inputUserName" placeholder="Example: 10.30-11.00 WIB" required>
-                                </div>
+                            <!-- /.input group -->
+                        </div>
+                        <!-- /.form group -->
+                        <div class="form-group mb-4">
+                            <label for="inputUserName" class="col-sm-4 control-label">Place</label>
+                            <div class="col-sm-7">
+                                <input type="text" name="xtempat" class="form-control" id="inputUserName" placeholder="Place" required>
                             </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="inputUserName" class="col-sm-4 control-label">Time</label>
+                            <div class="col-sm-7">
+                                <input type="text" name="xwaktu" class="form-control" id="inputUserName" placeholder="Example: 10.30-11.00 WIB" required>
+                            </div>
+                        </div>
 
-                            <div class="form-group mb-4">
-                                <label for="inputUserName" class="col-sm-4 control-label">Remarks</label>
-                                <div class="col-sm-7">
-                                  <textarea class="form-control" name="xketerangan" rows="2" placeholder="Remarks ..."></textarea>
-                                </div>
+                        <div class="form-group mb-4">
+                            <label for="inputUserName" class="col-sm-4 control-label">Remarks</label>
+                            <div class="col-sm-7">
+                                <textarea class="form-control" name="xketerangan" rows="2" placeholder="Remarks ..."></textarea>
                             </div>
+                        </div>
 
                     </div>
                     <div class="modal-footer">
@@ -240,6 +246,7 @@
               $agenda_waktu=$i['agenda_waktu'];
               $agenda_keterangan=$i['agenda_keterangan'];
               $agenda_author=$i['agenda_author'];
+              $agenda_gambar=$i['agenda_gambar'];
               $tangal=$i['tanggal'];
             ?>
 	<!--Modal Edit Pengguna-->
@@ -268,7 +275,14 @@
                                 <label for="inputUserName" class="col-sm-4 control-label">Agenda Name</label>
                                 <div class="col-sm-7">
                                   <input type="hidden" name="kode" value="<?php echo $agenda_id;?>">
+                                  <input type="hidden" value="<?php echo $agenda_gambar;?>" name="gambar">
                                   <input type="text" name="xnama_agenda" class="form-control" value="<?php echo $agenda_nama;?>" id="inputUserName" placeholder="Agenda Name" required>
+                                </div>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="inputUserName" class="col-sm-4 control-label">Event Picture</label>
+                                <div class="col-sm-12">
+                                    <input type="file" name="filefoto" required/>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
@@ -347,6 +361,7 @@
               $agenda_waktu=$i['agenda_waktu'];
               $agenda_keterangan=$i['agenda_keterangan'];
               $agenda_author=$i['agenda_author'];
+              $agenda_gambar=$i['agenda_gambar'];
               $tangal=$i['tanggal'];
             ?>
 	<!--Modal Hapus Pengguna-->
@@ -371,6 +386,7 @@
                     <form class="form-horizontal" action="<?php echo base_url().'admin/agenda/hapus_agenda'?>" method="post" enctype="multipart/form-data">
                     <div class="modal-body">
 							<input type="hidden" name="kode" value="<?php echo $agenda_id;?>"/>
+                            <input type="hidden" value="<?php echo $agenda_gambar;?>" name="gambar">
                             <p>Are You sure want to delete agenda <b><?php echo $agenda_nama;?></b> ?</p>
 
                     </div>

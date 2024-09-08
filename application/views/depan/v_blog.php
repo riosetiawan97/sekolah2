@@ -56,7 +56,7 @@
                     <!--begin::Content-->
                     <div class="flex-lg-row-fluid me-xl-15">
                         <!--begin::Post content-->
-                        <?php echo $this->session->flashdata('msg');?>
+                        
                         <?php foreach ($data->result() as $row) : ?>
                         <div class="mb-17">
                             <!--begin::Wrapper-->
@@ -123,7 +123,7 @@
                                 <!--begin::Container-->
                                 <div class="overlay mt-8">
                                     <!--begin::Image-->
-                                    <div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-350px" style="background-image:url('<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>')"></div>
+                                    <div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-300px" style="background-image:url('<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>')"></div>
                                     <!--end::Image-->
                                     <!--begin::Links-->
                                     <div class="overlay-layer card-rounded bg-dark bg-opacity-25">

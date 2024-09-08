@@ -152,25 +152,25 @@
                 <form class="form-horizontal" action="<?php echo base_url().'admin/album/simpan_album'?>" method="post" enctype="multipart/form-data">
                 <div class="modal-body">
 
-                                <div class="form-group mb-4">
-                                    <label for="inputUserName" class="col-sm-4 control-label">Album Name</label>
-                                    <div class="col-sm-12">
-                                        <input type="text" name="xnama_album" class="form-control" id="inputUserName" placeholder="Album Name" required>
-                                    </div>
-                                </div>
+                    <div class="form-group mb-4">
+                        <label for="inputUserName" class="col-sm-4 control-label">Album Name</label>
+                        <div class="col-sm-12">
+                            <input type="text" name="xnama_album" class="form-control" id="inputUserName" placeholder="Album Name" required>
+                        </div>
+                    </div>
 
-                                <div class="form-group mb-4">
-                                    <label for="inputUserName" class="col-sm-4 control-label">Cover Album</label>
-                                    <div class="col-sm-12">
-                                        <input type="file" name="filefoto" required/>
-                                    </div>
-                                </div>
-                                <div class="form-group mb-4">
-                                    <label for="inputDeskripsi" class="col-sm-4 control-label">Description</label>
-                                    <div class="col-sm-12">
-                                        <textarea class="ckeditor" name="deskripsi" required></textarea>
-                                    </div>
-                                </div>
+                    <div class="form-group mb-4">
+                        <label for="inputUserName" class="col-sm-4 control-label">Cover Album</label>
+                        <div class="col-sm-12">
+                            <input type="file" name="filefoto" required/>
+                        </div>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="inputDeskripsi" class="col-sm-4 control-label">Description</label>
+                        <div class="col-sm-12">
+                            <textarea class="ckeditor" name="deskripsi" required></textarea>
+                        </div>
+                    </div>
 
                 </div>
                 <div class="modal-footer">

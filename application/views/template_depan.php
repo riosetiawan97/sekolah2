@@ -35,6 +35,8 @@ License: For each use you must have a valid license purchased only from above li
 		<link href="<?php echo base_url().'assets/metronic/plugins/global/plugins.bundle.css'?>" rel="stylesheet" type="text/css" />
 		<link href="<?php echo base_url().'assets/metronic/css/style.bundle.css'?>" rel="stylesheet" type="text/css" />
 		<!--end::Global Stylesheets Bundle-->
+		<link href="<?php echo base_url().'theme/css/jquery.magnify.css'?>" rel="stylesheet">
+		<link href="<?php echo base_url().'theme/css/magnify-white-theme.css'?>" rel="stylesheet">
 		<style>
 body {
   font-family: Arial;
@@ -207,8 +209,8 @@ img {
 												</a>
 											</div>
 											<div class="menu-item me-lg-1">
-												<a class="menu-link py-3" href="<?php echo site_url('pengumuman');?>">
-													<span class="menu-title">Announcement</span>
+												<a class="menu-link py-3" href="<?php echo site_url('faq');?>">
+													<span class="menu-title">FAQ</span>
 												</a>
 											</div>
 											<div class="menu-item me-lg-1">
@@ -3643,6 +3645,7 @@ img {
 		<script src="<?php echo base_url().'assets/metronic/js/custom/modals/create-app.js'?>"></script>
 		<script src="<?php echo base_url().'assets/metronic/js/custom/modals/upgrade-plan.js'?>"></script>
 		<!--end::Page Custom Javascript-->
+
 		
 <script>
 let slideIndex = 1;
@@ -3682,6 +3685,37 @@ var myTimer = setInterval(changer, 1000);
 source.addEventListener("mouseover", function(){ clearInterval(myTimer)});
 source.addEventListener("mouseout", function(){ myTimer = setInterval(changer, 3000);});
 </script>
+<script src="<?php echo base_url().'theme/js/jquery.magnify.js'?>"></script>
+
+<script>
+   $('[data-magnify]').magnify({
+      headerToolbar: [
+        'close'
+      ],
+      footerToolbar: [
+        'prev',
+        'next',
+        'zoomIn',
+        'zoomOut',
+        'fullscreen',
+        'actualSize',
+        'rotateLeft',
+        'rotateRight',
+        'myCustomButton'
+      ],
+      modalWidth: 400,
+      modalHeight: 400,
+      callbacks: {
+        beforeChange: function (context, index) {
+          console.log(context, index)
+        },
+        changed: function (context, index) {
+          console.log(context, index)
+        }
+      },
+      initMaximized:true,
+    });
+  </script>
 		<!--end::Javascript-->
 	</body>
 	<!--end::Body-->
