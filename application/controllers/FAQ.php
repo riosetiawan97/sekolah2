@@ -14,6 +14,7 @@ class Faq extends CI_Controller{
 			$row=$data->row_array();
 			$x['id']=$row['faq_id'];
 			$x['idfaqurl']=$row['faq_id'];
+			$x['faq_gambar']=$row['faq_gambar'];
 			$x['title_faq']=$row['faq_judul'];
 			$x['content_faq']=$row['faq_isi'];
 			$x['setup']=$this->m_setup->get_setup()->row();
@@ -27,6 +28,7 @@ class Faq extends CI_Controller{
 			$row=$data->row_array();
 			$x['id']=$row['faq_id'];
 			$x['idfaqurl']=$idfaq;
+			$x['faq_gambar']=$row['faq_gambar'];
 			$x['title_faq']=$row['faq_judul'];
 			$x['content_faq']=$row['faq_isi'];
 			$x['setup']=$this->m_setup->get_setup()->row();

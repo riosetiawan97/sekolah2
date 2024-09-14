@@ -184,7 +184,7 @@ License: For each use you must have a valid license purchased only from above li
 											</span>
 											<!--end::Svg Icon-->
 										</span>
-										<span class="menu-title">agenda</span>
+										<span class="menu-title">Agenda</span>
 									</a>
 								</div>
 								<div class="menu-item">

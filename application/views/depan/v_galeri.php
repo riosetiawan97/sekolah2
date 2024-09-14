@@ -32,7 +32,7 @@
                 </li>
                 <!--end::Item-->
                 <!--begin::Item-->
-                <li class="breadcrumb-item text-dark">List Gallery</li>
+                <li class="breadcrumb-item text-dark">Gallery List</li>
                 <!--end::Item-->
             </ul>
             <!--end::Breadcrumb-->

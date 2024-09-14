@@ -33,7 +33,7 @@
                 </li>
                 <!--end::Item-->
                 <!--begin::Item-->
-                <li class="breadcrumb-item text-muted">News List</li>
+                <li class="breadcrumb-item text-dark">News List</li>
                 <!--end::Item-->
             </ul>
             <!--end::Breadcrumb-->
@@ -68,17 +68,15 @@
                                         <!--begin::Icon-->
                                         <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
                                         <span class="svg-icon svg-icon-primary svg-icon-2 me-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                <rect x="2" y="2" width="9" height="9" rx="2" fill="black" />
-                                                <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="black" />
-                                                <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="black" />
-                                                <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="black" />
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#009ef7" class="bi bi-calendar3" viewBox="0 0 16 16">
+                                                <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"/>
+                                                <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
                                             </svg>
                                         </span>
                                         <!--end::Svg Icon-->
                                         <!--end::Icon-->
                                         <!--begin::Label-->
-                                        <span class="fw-bolder text-gray-400"><?php echo $row->tanggal;?></span>
+                                        <span class="fw-bolder text-dark"><?php echo $row->tanggal;?></span>
                                         <!--end::Label-->
                                     </div>
                                     <!--end::Item-->
@@ -93,7 +91,7 @@
                                         </span>
                                         <!--end::Icon-->
                                         <!--begin::Label-->
-                                        <span class="fw-bolder text-gray-400"> <?php echo $row->tulisan_author;?></span>
+                                        <span class="fw-bolder text-dark"> <?php echo $row->tulisan_author;?></span>
                                         <!--begin::Label-->
                                     </div>
                                     <!--end::Item-->
@@ -110,7 +108,7 @@
                                         <!--end::Svg Icon-->
                                         <!--end::Icon-->
                                         <!--begin::Label-->
-                                        <span class="fw-bolder text-gray-400"><?php echo $row->tulisan_kategori_nama;?></span>
+                                        <span class="fw-bolder text-dark"><?php echo $row->tulisan_kategori_nama;?></span>
                                         <!--end::Label-->
                                     </div>
                                     <!--end::Item-->

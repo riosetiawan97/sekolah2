@@ -55,5 +55,6 @@ $route['artikel']='blog';
 $route['artikel']='blog/index';
 $route['artikel/(:any)']='blog/detail/$1';
 $route['faq/(:any)']='faq/detail/$1';
+$route['agenda/(:any)']='agenda/detail/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

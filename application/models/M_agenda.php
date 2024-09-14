@@ -16,6 +16,7 @@ class M_agenda extends CI_Model{
 		return $hsl;
 	}
 	function update_agenda($kode,$nama_agenda,$deskripsi,$mulai,$selesai,$tempat,$waktu,$keterangan,$agenda_gambar){
+		$author=$this->session->userdata('nama');
 		$hsl=$this->db->query("UPDATE tbl_agenda SET agenda_nama='$nama_agenda',agenda_deskripsi='$deskripsi',agenda_mulai='$mulai',agenda_selesai='$selesai',agenda_tempat='$tempat',agenda_waktu='$waktu',agenda_keterangan='$keterangan',agenda_author='$author', agenda_gambar='$agenda_gambar' where agenda_id='$kode'");
 		return $hsl;
 	}
@@ -40,6 +41,11 @@ class M_agenda extends CI_Model{
 	}
 	function agenda_perpage($offset,$limit){
 		$hsl=$this->db->query("SELECT tbl_agenda.*,DATE_FORMAT(agenda_tanggal,'%d/%m/%Y') AS tanggal FROM tbl_agenda ORDER BY agenda_id DESC limit $offset,$limit");
+		return $hsl;
+	}
+	
+	function get_agenda_byid($agenda_id){
+		$hsl=$this->db->query("select *,DATE_FORMAT(agenda_tanggal,'%d/%m/%Y') AS tanggal from tbl_agenda where agenda_id='$agenda_id'");
 		return $hsl;
 	}
 

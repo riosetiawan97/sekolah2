@@ -33,7 +33,7 @@
                 </li>
                 <!--end::Item-->
                 <!--begin::Item-->
-                <li class="breadcrumb-item text-dark">Event List</li>
+                <li class="breadcrumb-item text-dark">Event Detail</li>
                 <!--end::Item-->
             </ul>
             <!--end::Breadcrumb-->
@@ -57,12 +57,11 @@
                     <div class="flex-lg-row-fluid me-xl-15">
                         <!--begin::Post content-->
                         
-                        <?php foreach ($data->result() as $row) : ?>
                         <div class="mb-17">
                             <!--begin::Wrapper-->
                             <div class="mb-8">
                                 <!--begin::Title-->
-                                <a href="<?php echo site_url('agenda/'.$row->agenda_id);?>" class="text-dark text-hover-primary fs-2 fw-bolder"><?php echo $row->agenda_nama;?>
+                                <a href="<?php echo site_url('agenda/'.$agenda_id);?>" class="text-dark text-hover-primary fs-2 fw-bolder"><?php echo $agenda_nama;?>
                                 <span class="fw-bolder text-muted fs-5 ps-1"></span></a>
                                 <!--end::Title-->
                                 <!--begin::Info-->
@@ -80,7 +79,7 @@
                                         <!--end::Svg Icon-->
                                         <!--end::Icon-->
                                         <!--begin::Label-->
-                                        <span class="fw-bolder text-dark"><?php echo $row->tanggal;?></span>
+                                        <span class="fw-bolder text-dark"><?php echo $agenda_tanggal;?></span>
                                         <!--end::Label-->
                                     </div>
                                     <!--end::Item-->
@@ -95,36 +94,30 @@
                                         </span>
                                         <!--end::Icon-->
                                         <!--begin::Label-->
-                                        <span class="fw-bolder text-dark"> <?php echo $row->agenda_author;?></span>
+                                        <span class="fw-bolder text-dark"> <?php echo $agenda_author;?></span>
                                         <!--begin::Label-->
                                     </div>
                                     <!--end::Item-->
                                 </div>
-                                <!--end::Info-->                                
-                                <!--begin::Description-->
-                                <div class="fs-5 fw-bold text-gray-600">
-                                    <!--begin::Text-->
-                                    <p class="mb-8"><?=$this->fungsi->limit_words($row->agenda_deskripsi,10).'...';?></p>
-                                    <!--end::Text-->
-                                </div>
-                                <!--end::Description-->
+                                <!--end::Info-->
                                 <!--begin::Container-->
                                 <div class="overlay mt-8">
                                     <!--begin::Image-->
-                                    <div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-300px" style="background-image:url('<?php echo base_url().'assets/images/'.$row->agenda_gambar;?>')"></div>
+                                    <div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-350px" style="background-image:url('<?php echo base_url().'assets/images/'.$agenda_gambar?>')"></div>
                                     <!--end::Image-->
-                                    <!--begin::Links-->
-                                    <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-                                        <a href="<?php echo site_url('agenda/'.$row->agenda_id);?>" class="btn btn-primary">Read More</a>
-                                    </div>
-                                    <!--end::Links-->
                                 </div>
                                 <!--end::Container-->
                             </div>
                             <!--end::Wrapper-->
+                            <!--begin::Description-->
+                            <div class="fs-5 fw-bold text-black">
+                                <!--begin::Text-->
+                                <p class="mb-8"><?php echo $agenda_deskripsi;?></p>
+                                <!--end::Text-->
+                            </div>
+                            <!--end::Description-->
                         </div>
-                        <!--end::Post content-->                        
-                        <?php endforeach;?>
+                        <!--end::Post content-->
                 <nav>
                     <?php error_reporting(0); echo $page;?>
                 </nav>

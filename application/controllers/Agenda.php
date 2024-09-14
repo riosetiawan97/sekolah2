@@ -43,10 +43,36 @@ class Agenda extends CI_Controller{
 		$x['page'] =$this->pagination->create_links();
 		$x['data']=$this->m_agenda->agenda_perpage($offset,$limit);		
 		$x['setup']=$this->m_setup->get_setup()->row();
+		$x['latest']=$this->db->query("SELECT * FROM tbl_agenda ORDER BY agenda_id DESC LIMIT 5");
 		$judul_website=$x['setup']->judul_website;
 		//$this->load->view('depan/v_agenda',$x);
 		$x['title']="$judul_website | Agenda";
 		$this->template->load('template_depan', 'depan/v_agenda', $x);
+	}
+
+	function detail($idagenda){
+		$query = $this->db->get_where('tbl_agenda', array('agenda_id' => $idagenda));
+		if($query->num_rows() > 0){
+			$b=$query->row_array();
+			$kode=$b['agenda_id'];
+			$data=$this->m_agenda->get_agenda_byid($kode);
+			$row=$data->row_array();
+			$x['agenda_id']=$row['agenda_id'];
+			$x['agenda_nama']=$row['agenda_nama'];
+			$x['agenda_gambar']=$row['agenda_gambar'];
+			$x['agenda_deskripsi'] =$row['agenda_deskripsi'];
+			$x['agenda_tanggal']=$row['tanggal'];
+			$x['agenda_author']=$row['agenda_author'];
+			$x['setup']=$this->m_setup->get_setup()->row();
+			$x['latest']=$this->db->query("SELECT * FROM tbl_agenda ORDER BY agenda_id DESC LIMIT 5");
+			$judul_website=$x['setup']->judul_website;
+			//$this->load->view('depan/v_blog_detail',$x);
+			$x['title']="$judul_website | Detail Agenda";
+			//$x['title']=$row['tulisan_judul'];
+			$this->template->load('template_depan', 'depan/v_agenda_detail', $x);
+		}else{
+			redirect('agenda');
+		}
 	}
 
 }

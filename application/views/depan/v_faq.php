@@ -32,7 +32,7 @@
                 </li>
                 <!--end::Item-->
                 <!--begin::Item-->
-                <li class="breadcrumb-item text-dark">FAQ</li>
+                <li class="breadcrumb-item text-dark">FAQ List</li>
                 <!--end::Item-->
             </ul>
             <!--end::Breadcrumb-->
@@ -84,6 +84,9 @@
                                 <section class="welcome_about">
                                     <div class="container">
                                         <div class="row">
+                                            <div class="col-md-12 mb-10">
+                                                <img src="<?php echo base_url().'assets/images/'.$faq_gambar;?>" class="img-fluid" alt="#">
+                                            </div>
                                             <div class="col-md-12">
                                                 <h2><?php echo $title_faq;?></h2>
                                                 <p><?php echo $content_faq;?>

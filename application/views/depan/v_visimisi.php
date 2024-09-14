@@ -32,7 +32,7 @@
                 </li>
                 <!--end::Item-->
                 <!--begin::Item-->
-                <li class="breadcrumb-item text-dark">Visi Misi</li>
+                <li class="breadcrumb-item text-dark">Vision & Mision</li>
                 <!--end::Item-->
             </ul>
             <!--end::Breadcrumb-->
