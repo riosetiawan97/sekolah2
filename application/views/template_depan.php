@@ -313,31 +313,50 @@ img {
 							</div>
 							<!--end::Col-->
 							<!--begin::Col-->
-							<div class="col-lg-6 ps-lg-16">
+							<div class="col-lg-9 ps-lg-16">
 								<!--begin::Navs-->
 								<div class="d-flex justify-content-center">
 									<!--begin::Links-->
 									<div class="d-flex fw-bold flex-column me-20">
 										<!--begin::Subtitle-->
-										<h4 class="fw-bolder text-gray-400 mb-6">More for Metronic</h4>
+										<h4 class="fw-bolder text-gray-400 mb-6">Menu Utama</h4>
 										<!--end::Subtitle-->
 										<!--begin::Link-->
-										<a href="#" class="text-white opacity-50 text-hover-primary fs-5 mb-6">FAQ</a>
+										<a href="<?php echo site_url('');?>" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Home</a>
 										<!--end::Link-->
 										<!--begin::Link-->
-										<a href="#" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Documentaions</a>
+										<a href="<?php echo site_url('about');?>" class="text-white opacity-50 text-hover-primary fs-5 mb-6">About Us</a>
 										<!--end::Link-->
 										<!--begin::Link-->
-										<a href="#" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Video Tuts</a>
+										<a href="<?php echo site_url('visi_misi');?>" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Vision & Mision</a>
 										<!--end::Link-->
 										<!--begin::Link-->
-										<a href="#" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Changelog</a>
+										<a href="<?php echo site_url('blog');?>" class="text-white opacity-50 text-hover-primary fs-5 mb-6">News</a>
 										<!--end::Link-->
 										<!--begin::Link-->
-										<a href="#" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Github</a>
+										<a href="<?php echo site_url('faq');?>" class="text-white opacity-50 text-hover-primary fs-5 mb-6">FAQ</a>
 										<!--end::Link-->
 										<!--begin::Link-->
-										<a href="#" class="text-white opacity-50 text-hover-primary fs-5">Tutorials</a>
+										<a href="<?php echo site_url('agenda');?>" class="text-white opacity-50 text-hover-primary fs-5">Event</a>
+										<!--end::Link-->
+									</div>
+									<!--end::Links-->
+									<!--begin::Links-->
+									<div class="d-flex fw-bold flex-column me-20">
+										<!--begin::Subtitle-->
+										<h4 class="fw-bolder text-gray-400 mb-12"></h4>
+										<!--end::Subtitle-->
+										<!--begin::Link-->
+										<a href="<?php echo site_url('galeri');?>" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Gallery</a>
+										<!--end::Link-->
+										<!--begin::Link-->
+										<a href="<?php echo site_url('contact');?>" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Contact Us</a>
+										<!--end::Link-->
+										<!--begin::Link-->
+										<a href="<?php echo site_url('alur_pendaftaran');?>" class="text-white opacity-50 text-hover-primary fs-5 mb-6">How To Apply</a>
+										<!--end::Link-->
+										<!--begin::Link-->
+										<a href="<?php echo $setup->formpendaftaran;?>" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Addmission</a>
 										<!--end::Link-->
 									</div>
 									<!--end::Links-->
@@ -347,31 +366,19 @@ img {
 										<h4 class="fw-bolder text-gray-400 mb-6">Stay Connected</h4>
 										<!--end::Subtitle-->
 										<!--begin::Link-->
-										<a href="#" class="mb-6">
+										<a href="https://www.facebook.com/<?php echo $setup->facebook;?>" target="_blank" class="mb-6">
 											<img src="<?php echo base_url().'assets/metronic/media/svg/brand-logos/facebook-4.svg'?>" class="h-20px me-2" alt="" />
 											<span class="text-white opacity-50 text-hover-primary fs-5 mb-6">Facebook</span>
 										</a>
 										<!--end::Link-->
 										<!--begin::Link-->
-										<a href="#" class="mb-6">
+										<a href="https://wa.me/<?php echo (substr($setup->whatsapp,0,1)=='0') ? '62'.substr($setup->whatsapp,1) : $setup->whatsapp ;?>" target="_blank" class="mb-6">
 											<img src="<?php echo base_url().'assets/metronic/media/svg/brand-logos/WhatsApp.svg.webp'?>" class="h-20px me-2" alt="" />
 											<span class="text-white opacity-50 text-hover-primary fs-5 mb-6">WhatsApp</span>
 										</a>
 										<!--end::Link-->
 										<!--begin::Link-->
-										<a href="#" class="mb-6">
-											<img src="<?php echo base_url().'assets/metronic/media/svg/brand-logos/twitter.svg'?>" class="h-20px me-2" alt="" />
-											<span class="text-white opacity-50 text-hover-primary fs-5 mb-6">Twitter</span>
-										</a>
-										<!--end::Link-->
-										<!--begin::Link-->
-										<a href="#" class="mb-6">
-											<img src="<?php echo base_url().'assets/metronic/media/svg/brand-logos/dribbble-icon-1.svg'?>" class="h-20px me-2" alt="" />
-											<span class="text-white opacity-50 text-hover-primary fs-5 mb-6">Dribbble</span>
-										</a>
-										<!--end::Link-->
-										<!--begin::Link-->
-										<a href="#" class="mb-6">
+										<a href="https://www.instagram.com/" target="_blank" class="mb-6">
 											<img src="<?php echo base_url().'assets/metronic/media/svg/brand-logos/instagram-2-1.svg'?>" class="h-20px me-2" alt="" />
 											<span class="text-white opacity-50 text-hover-primary fs-5 mb-6">Instagram</span>
 										</a>
@@ -416,402 +423,20 @@ img {
 		<!--end::Root-->
 		<!--begin::Drawers-->
 		<!--begin::Exolore drawer toggle-->
-		<button id="kt_explore_toggle1" class="explore-toggle btn btn-sm bg-body btn-color-gray-700 btn-active-primary shadow-sm position-fixed px-5 fw-bolder zindex-2 top-50 mt-10 end-0 transform-90 fs-6 rounded-top-0" title="Explore Metronic" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover">
-		<span id="kt_explore_toggle_label">Explore1</span>
-		</button>
+		<a href="https://www.facebook.com/<?php echo $setup->facebook;?>" target="_blank" class="explore-toggle btn btn-sm bg-body btn-color-gray-700 btn-active-primary shadow-sm position-fixed px-5 fw-bolder zindex-2 mt-10 end-0 fs-6 rounded-left-0" title="Facebook" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" style="top: 42%!important;">
+			<img src="<?php echo base_url().'assets/metronic/media/svg/brand-logos/facebook-4.svg'?>" class="h-30px" alt="" />
+		</a>
 		<!--end::Exolore drawer toggle-->
 		<!--begin::Exolore drawer toggle-->
-		<button id="kt_explore_toggle" class="explore-toggle btn btn-sm bg-body btn-color-gray-700 btn-active-primary shadow-sm position-fixed px-5 fw-bolder zindex-2 top-50 mt-10 end-0 transform-90 fs-6 rounded-top-0" title="Explore Metronic" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover">
-			<img src="<?php echo base_url().'assets/metronic/media/svg/brand-logos/WhatsApp.svg.webp'?>" class="h-30px me-2" alt="" />	
-			<span id="kt_explore_toggle_label">Explore</span>
-		</button>
+		<a href="https://wa.me/<?php echo (substr($setup->whatsapp,0,1)=='0') ? '62'.substr($setup->whatsapp,1) : $setup->whatsapp ;?>" target="_blank" class="explore-toggle btn btn-sm bg-body btn-color-gray-700 btn-active-primary shadow-sm position-fixed px-5 fw-bolder zindex-2 mt-10 end-0 fs-6 rounded-left-0" title="WhatsApp" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" style="top: 50%!important;">
+			<img src="<?php echo base_url().'assets/metronic/media/svg/brand-logos/WhatsApp.svg.webp'?>" class="h-30px" alt="" />			
+		</a>
 		<!--end::Exolore drawer toggle-->
-		<!--begin::Exolore drawer-->
-		<div id="kt_explore" class="bg-body" data-kt-drawer="true" data-kt-drawer-name="explore" data-kt-drawer-activate="true" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'350px', 'lg': '475px'}" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_explore_toggle" data-kt-drawer-close="#kt_explore_close">
-			<!--begin::Card-->
-			<div class="card shadow-none rounded-0 w-100">
-				<!--begin::Header-->
-				<div class="card-header" id="kt_explore_header">
-					<h3 class="card-title fw-bolder text-gray-700">Explore Metronic</h3>
-					<div class="card-toolbar">
-						<button type="button" class="btn btn-sm btn-icon btn-active-light-primary me-n5" id="kt_explore_close">
-							<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
-							<span class="svg-icon svg-icon-2">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-									<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
-									<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
-								</svg>
-							</span>
-							<!--end::Svg Icon-->
-						</button>
-					</div>
-				</div>
-				<!--end::Header-->
-				<!--begin::Body-->
-				<div class="card-body" id="kt_explore_body">
-					<!--begin::Content-->
-					<div id="kt_explore_scroll" class="scroll-y me-n5 pe-5" data-kt-scroll="true" data-kt-scroll-height="auto" data-kt-scroll-wrappers="#kt_explore_body" data-kt-scroll-dependencies="#kt_explore_header" data-kt-scroll-offset="5px">
-						<!--begin::Wrapper-->
-						<div class="mb-0">
-							<!--begin::Header-->
-							<div class="mb-7">
-								<div class="d-flex flex-stack">
-									<h3 class="mb-0">Metronic Licenses</h3>
-									<a href="https://themeforest.net/licenses/standard" class="fw-bold" target="_blank">License FAQs</a>
-								</div>
-							</div>
-							<!--end::Header-->
-							<!--begin::License-->
-							<div class="rounded border border-dashed border-gray-300 py-4 px-6 mb-5">
-								<div class="d-flex flex-stack">
-									<div class="d-flex flex-column">
-										<div class="d-flex align-items-center mb-1">
-											<div class="fs-6 fw-bold text-gray-800 fw-bold mb-0 me-1">Regular License</div>
-											<i class="text-gray-400 fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="popover" data-bs-custom-class="popover-dark" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="Use, by you or one client in a single end product which end users are not charged for."></i>
-										</div>
-										<div class="fs-7 text-muted">For single end product used by you or one client</div>
-									</div>
-									<div class="text-nowrap">
-										<span class="text-muted fs-7 fw-bold me-n1">$</span>
-										<span class="text-dark fs-1 fw-bolder">39</span>
-									</div>
-								</div>
-							</div>
-							<!--end::License-->
-							<!--begin::License-->
-							<div class="rounded border border-dashed border-gray-300 py-4 px-6 mb-5">
-								<div class="d-flex flex-stack">
-									<div class="d-flex flex-column">
-										<div class="d-flex align-items-center mb-1">
-											<div class="fs-6 fw-bold text-gray-800 fw-bold mb-0 me-1">Extended License</div>
-											<i class="text-gray-400 fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="popover" data-bs-custom-class="popover-dark" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="Use, by you or one client, in a single end product which end users can be charged for."></i>
-										</div>
-										<div class="fs-7 text-muted">For single end product with paying users.</div>
-									</div>
-									<div class="text-nowrap">
-										<span class="text-muted fs-7 fw-bold me-n1">$</span>
-										<span class="text-dark fs-1 fw-bolder">939</span>
-									</div>
-								</div>
-							</div>
-							<!--end::License-->
-							<!--begin::License-->
-							<div class="rounded border border-dashed border-gray-300 py-4 px-6 mb-5">
-								<div class="d-flex flex-stack">
-									<div class="d-flex flex-column">
-										<div class="d-flex align-items-center mb-1">
-											<div class="fs-6 fw-bold text-gray-800 fw-bold mb-0 me-1">Custom License</div>
-										</div>
-										<div class="fs-7 text-muted">Reach us for custom license offers.</div>
-									</div>
-									<div class="text-nowrap">
-										<a href="https://keenthemes.com/contact/" class="btn btn-sm btn-success" target="_blank">Contact Us</a>
-									</div>
-								</div>
-							</div>
-							<!--end::License-->
-							<!--begin::Purchase-->
-							<a href="https://1.envato.market/EA4JP" class="btn btn-primary mb-15 w-100">Buy Now</a>
-							<!--end::Purchase-->
-							<!--begin::Demos-->
-							<div class="mb-0">
-								<h3 class="fw-bolder text-center mb-6">Metronic Demos</h3>
-								<!--begin::Row-->
-								<div class="row g-5">
-									<!--begin::Col-->
-									<div class="col-6">
-										<!--begin::Demo-->
-										<div class="overlay overflow-hidden position-relative border border-4 border-success rounded">
-											<div class="overlay-wrapper">
-												<img src="<?php echo base_url().'assets/metronic/media/demos/demo1.png'?>" alt="demo" class="w-100" />
-											</div>
-											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo1" class="btn btn-sm btn-success shadow">Demo 1</a>
-											</div>
-										</div>
-										<!--end::Demo-->
-									</div>
-									<!--end::Col-->
-									<!--begin::Col-->
-									<div class="col-6">
-										<!--begin::Demo-->
-										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
-											<div class="overlay-wrapper">
-												<img src="<?php echo base_url().'assets/metronic/media/demos/demo2.png'?>" alt="demo" class="w-100" />
-											</div>
-											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo2" class="btn btn-sm btn-success shadow">Demo 2</a>
-											</div>
-										</div>
-										<!--end::Demo-->
-									</div>
-									<!--end::Col-->
-									<!--begin::Col-->
-									<div class="col-6">
-										<!--begin::Demo-->
-										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
-											<div class="overlay-wrapper">
-												<img src="<?php echo base_url().'assets/metronic/media/demos/demo3.png'?>" alt="demo" class="w-100" />
-											</div>
-											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo3" class="btn btn-sm btn-success shadow">Demo 3</a>
-											</div>
-										</div>
-										<!--end::Demo-->
-									</div>
-									<!--end::Col-->
-									<!--begin::Col-->
-									<div class="col-6">
-										<!--begin::Demo-->
-										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
-											<div class="overlay-wrapper">
-												<img src="<?php echo base_url().'assets/metronic/media/demos/demo4.png'?>" alt="demo" class="w-100" />
-											</div>
-											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo4" class="btn btn-sm btn-success shadow">Demo 4</a>
-											</div>
-										</div>
-										<!--end::Demo-->
-									</div>
-									<!--end::Col-->
-									<!--begin::Col-->
-									<div class="col-6">
-										<!--begin::Demo-->
-										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
-											<div class="overlay-wrapper">
-												<img src="<?php echo base_url().'assets/metronic/media/demos/demo5.png'?>" alt="demo" class="w-100" />
-											</div>
-											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo5" class="btn btn-sm btn-success shadow">Demo 5</a>
-											</div>
-										</div>
-										<!--end::Demo-->
-									</div>
-									<!--end::Col-->
-									<!--begin::Col-->
-									<div class="col-6">
-										<!--begin::Demo-->
-										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
-											<div class="overlay-wrapper">
-												<img src="<?php echo base_url().'assets/metronic/media/demos/demo6.png'?>" alt="demo" class="w-100" />
-											</div>
-											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo6" class="btn btn-sm btn-success shadow">Demo 6</a>
-											</div>
-										</div>
-										<!--end::Demo-->
-									</div>
-									<!--end::Col-->
-									<!--begin::Col-->
-									<div class="col-6">
-										<!--begin::Demo-->
-										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
-											<div class="overlay-wrapper">
-												<img src="<?php echo base_url().'assets/metronic/media/demos/demo7.png'?>" alt="demo" class="w-100" />
-											</div>
-											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo7" class="btn btn-sm btn-success shadow">Demo 7</a>
-											</div>
-										</div>
-										<!--end::Demo-->
-									</div>
-									<!--end::Col-->
-									<!--begin::Col-->
-									<div class="col-6">
-										<!--begin::Demo-->
-										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
-											<div class="overlay-wrapper">
-												<img src="<?php echo base_url().'assets/metronic/media/demos/demo8.png'?>" alt="demo" class="w-100" />
-											</div>
-											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo8" class="btn btn-sm btn-success shadow">Demo 8</a>
-											</div>
-										</div>
-										<!--end::Demo-->
-									</div>
-									<!--end::Col-->
-									<!--begin::Col-->
-									<div class="col-6">
-										<!--begin::Demo-->
-										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
-											<div class="overlay-wrapper">
-												<img src="<?php echo base_url().'assets/metronic/media/demos/demo9.png'?>" alt="demo" class="w-100" />
-											</div>
-											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo9" class="btn btn-sm btn-success shadow">Demo 9</a>
-											</div>
-										</div>
-										<!--end::Demo-->
-									</div>
-									<!--end::Col-->
-									<!--begin::Col-->
-									<div class="col-6">
-										<!--begin::Demo-->
-										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
-											<div class="overlay-wrapper">
-												<img src="<?php echo base_url().'assets/metronic/media/demos/demo10.png'?>" alt="demo" class="w-100 opacity-25" />
-											</div>
-											<div class="overlay-layer bg-dark bg-opacity-10">
-												<div class="badge badge-white px-6 py-4 fw-bold fs-base shadow">Coming soon</div>
-											</div>
-										</div>
-										<!--end::Demo-->
-									</div>
-									<!--end::Col-->
-									<!--begin::Col-->
-									<div class="col-6">
-										<!--begin::Demo-->
-										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
-											<div class="overlay-wrapper">
-												<img src="<?php echo base_url().'assets/metronic/media/demos/demo11.png'?>" alt="demo" class="w-100" />
-											</div>
-											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo11" class="btn btn-sm btn-success shadow">Demo 11</a>
-											</div>
-										</div>
-										<!--end::Demo-->
-									</div>
-									<!--end::Col-->
-									<!--begin::Col-->
-									<div class="col-6">
-										<!--begin::Demo-->
-										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
-											<div class="overlay-wrapper">
-												<img src="<?php echo base_url().'assets/metronic/media/demos/demo12.png'?>" alt="demo" class="w-100 opacity-25" />
-											</div>
-											<div class="overlay-layer bg-dark bg-opacity-10">
-												<div class="badge badge-white px-6 py-4 fw-bold fs-base shadow">Coming soon</div>
-											</div>
-										</div>
-										<!--end::Demo-->
-									</div>
-									<!--end::Col-->
-									<!--begin::Col-->
-									<div class="col-6">
-										<!--begin::Demo-->
-										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
-											<div class="overlay-wrapper">
-												<img src="<?php echo base_url().'assets/metronic/media/demos/demo13.png'?>" alt="demo" class="w-100" />
-											</div>
-											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo13" class="btn btn-sm btn-success shadow">Demo 13</a>
-											</div>
-										</div>
-										<!--end::Demo-->
-									</div>
-									<!--end::Col-->
-									<!--begin::Col-->
-									<div class="col-6">
-										<!--begin::Demo-->
-										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
-											<div class="overlay-wrapper">
-												<img src="<?php echo base_url().'assets/metronic/media/demos/demo14.png'?>" alt="demo" class="w-100 opacity-25" />
-											</div>
-											<div class="overlay-layer bg-dark bg-opacity-10">
-												<div class="badge badge-white px-6 py-4 fw-bold fs-base shadow">Coming soon</div>
-											</div>
-										</div>
-										<!--end::Demo-->
-									</div>
-									<!--end::Col-->
-									<!--begin::Col-->
-									<div class="col-6">
-										<!--begin::Demo-->
-										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
-											<div class="overlay-wrapper">
-												<img src="<?php echo base_url().'assets/metronic/media/demos/demo15.png'?>" alt="demo" class="w-100 opacity-25" />
-											</div>
-											<div class="overlay-layer bg-dark bg-opacity-10">
-												<div class="badge badge-white px-6 py-4 fw-bold fs-base shadow">Coming soon</div>
-											</div>
-										</div>
-										<!--end::Demo-->
-									</div>
-									<!--end::Col-->
-									<!--begin::Col-->
-									<div class="col-6">
-										<!--begin::Demo-->
-										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
-											<div class="overlay-wrapper">
-												<img src="<?php echo base_url().'assets/metronic/media/demos/demo16.png'?>" alt="demo" class="w-100 opacity-25" />
-											</div>
-											<div class="overlay-layer bg-dark bg-opacity-10">
-												<div class="badge badge-white px-6 py-4 fw-bold fs-base shadow">Coming soon</div>
-											</div>
-										</div>
-										<!--end::Demo-->
-									</div>
-									<!--end::Col-->
-									<!--begin::Col-->
-									<div class="col-6">
-										<!--begin::Demo-->
-										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
-											<div class="overlay-wrapper">
-												<img src="<?php echo base_url().'assets/metronic/media/demos/demo17.png'?>" alt="demo" class="w-100 opacity-25" />
-											</div>
-											<div class="overlay-layer bg-dark bg-opacity-10">
-												<div class="badge badge-white px-6 py-4 fw-bold fs-base shadow">Coming soon</div>
-											</div>
-										</div>
-										<!--end::Demo-->
-									</div>
-									<!--end::Col-->
-									<!--begin::Col-->
-									<div class="col-6">
-										<!--begin::Demo-->
-										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
-											<div class="overlay-wrapper">
-												<img src="<?php echo base_url().'assets/metronic/media/demos/demo18.png'?>" alt="demo" class="w-100 opacity-25" />
-											</div>
-											<div class="overlay-layer bg-dark bg-opacity-10">
-												<div class="badge badge-white px-6 py-4 fw-bold fs-base shadow">Coming soon</div>
-											</div>
-										</div>
-										<!--end::Demo-->
-									</div>
-									<!--end::Col-->
-									<!--begin::Col-->
-									<div class="col-6">
-										<!--begin::Demo-->
-										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
-											<div class="overlay-wrapper">
-												<img src="<?php echo base_url().'assets/metronic/media/demos/demo19.png'?>" alt="demo" class="w-100 opacity-25" />
-											</div>
-											<div class="overlay-layer bg-dark bg-opacity-10">
-												<div class="badge badge-white px-6 py-4 fw-bold fs-base shadow">Coming soon</div>
-											</div>
-										</div>
-										<!--end::Demo-->
-									</div>
-									<!--end::Col-->
-									<!--begin::Col-->
-									<div class="col-6">
-										<!--begin::Demo-->
-										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
-											<div class="overlay-wrapper">
-												<img src="<?php echo base_url().'assets/metronic/media/demos/demo20.png'?>" alt="demo" class="w-100 opacity-25" />
-											</div>
-											<div class="overlay-layer bg-dark bg-opacity-10">
-												<div class="badge badge-white px-6 py-4 fw-bold fs-base shadow">Coming soon</div>
-											</div>
-										</div>
-										<!--end::Demo-->
-									</div>
-									<!--end::Col-->
-								</div>
-								<!--end::Row-->
-							</div>
-							<!--end::Demos-->
-						</div>
-						<!--end::Wrapper-->
-					</div>
-					<!--end::Content-->
-				</div>
-				<!--end::Body-->
-			</div>
-			<!--end::Card-->
-		</div>
-		<!--end::Exolore drawer-->
+		<!--begin::Exolore drawer toggle-->
+		<a href="https://www.instagram.com/" target="_blank" class="explore-toggle btn btn-sm bg-body btn-color-gray-700 btn-active-primary shadow-sm position-fixed px-5 fw-bolder zindex-2 mt-10 end-0 fs-6 rounded-left-0" title="Instagram" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" style="top: 58%!important;">
+			<img src="<?php echo base_url().'assets/metronic/media/svg/brand-logos/instagram-2-1.svg'?>" class="h-30px" alt="" />
+		</a>
+		<!--end::Exolore drawer toggle-->
 		<!--end::Drawers-->
 		<!--begin::Scrolltop-->
 		<div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
@@ -879,7 +504,7 @@ function changer() {
 }
 var myTimer = setInterval(changer, 1000);
 source.addEventListener("mouseover", function(){ clearInterval(myTimer)});
-source.addEventListener("mouseout", function(){ myTimer = setInterval(changer, 3000);});
+source.addEventListener("mouseout", function(){ myTimer = setInterval(changer, 1000);});
 </script>
 <script src="<?php echo base_url().'theme/js/jquery.magnify.js'?>"></script>
 

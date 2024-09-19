@@ -215,7 +215,7 @@
                 <div class="modal-body">
                             <input type="hidden" name="kode" value="<?php echo $album_id;?>"/>
                             <input type="hidden" value="<?php echo $album_cover;?>" name="gambar">
-                              <div class="form-group mb-4">
+                                <div class="form-group mb-4">
                                     <label for="inputUserName" class="col-sm-4 control-label">Album Name</label>
                                     <div class="col-sm-12">
                                         <input type="text" name="xnama_album" class="form-control" value="<?php echo $album_nama;?>" id="inputUserName" placeholder="Album Name" required>

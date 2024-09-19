@@ -100,6 +100,7 @@
                         </span>
                         <!--end::Svg Icon-->
                     </a>
+                    <?php if($youtube_id !='1'):?>
                     <a class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm" data-bs-toggle="modal" data-bs-target="#ModalHapus<?php echo $youtube_id;?>">
                         <!--begin::Svg Icon | path: icons/duotune/general/gen027.svg-->
                         <span class="svg-icon svg-icon-3">
@@ -111,6 +112,7 @@
                         </span>
                         <!--end::Svg Icon-->
                     </a>
+                    <?php endif;?>
               </td>
             </tr>
     <?php endforeach;?>
@@ -146,12 +148,18 @@
             </div>
             <form class="form-horizontal" action="<?php echo base_url().'admin/youtube/simpan_youtube'?>" method="post" enctype="multipart/form-data">
             <div class="modal-body">
-              <div class="form-group mb-4">
-                  <label for="inpuyoutubelink" class="col-sm-4 control-label">Link Youtube</label>
-                  <div class="col-sm-12">
-                      <input type="text" name="youtube_link" class="form-control" id="inpuyoutubelink" placeholder="Link Youtube" required>
-                  </div>
-              </div>
+                <div class="form-group mb-4">
+                    <label for="inpuyoutubelink" class="col-sm-4 control-label">Link Youtube</label>
+                    <div class="col-sm-12">
+                        <input type="text" name="youtube_link" class="form-control" id="inputyoutubelink" placeholder="Link Youtube" required>
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label for="inputUserName" class="col-sm-4 control-label">Description Youtube</label>
+                    <div class="col-sm-12">
+                        <input type="text" name="youtube_description" class="form-control" id="inputDescription" placeholder="Description Youtube" required>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default btn-flat" data-bs-dismiss="modal">Close</button>
@@ -167,6 +175,7 @@
 <?php foreach ($data->result_array() as $i) :
           $youtube_id=$i['youtube_id'];
           $youtube_link=$i['youtube_link'];
+          $youtube_description=$i['youtube_description'];
           $youtube_author=$i['youtube_author'];
           $youtube_tanggal=$i['youtube_tanggal'];
         ?>
@@ -196,6 +205,12 @@
                             <label for="inpuyoutubelink" class="col-sm-4 control-label">Link Youtube</label>
                             <div class="col-sm-12">
                                 <input type="text" name="youtube_link" class="form-control" value="<?php echo $youtube_link;?>" id="inpuyoutubelink" placeholder="Link Youtube" required>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="inputUserName" class="col-sm-4 control-label">Description Youtube</label>
+                            <div class="col-sm-12">
+                                <input type="text" name="youtube_description" class="form-control" value="<?php echo $youtube_description;?>" id="inputDescription" placeholder="Description Youtube" required>
                             </div>
                         </div>
                 </div>
