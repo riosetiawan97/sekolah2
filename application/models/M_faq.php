@@ -31,4 +31,10 @@ class M_faq extends CI_Model{
 		return $hsl;
 	}
 
+	//front-end
+	function get_faq_home(){
+		$hsl=$this->db->query("SELECT tbl_faq.* FROM tbl_faq where faq_aktif = 1 ORDER BY faq_id DESC limit 3");
+		return $hsl;
+	}
+
 }

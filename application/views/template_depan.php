@@ -140,6 +140,138 @@ img {
   width: 50%;
   max-height:50%;
 }
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-family:'Arial', sans-serif;
+	font-size:14px;
+	line-height:1.6em;
+}
+
+h1{
+	text-align:center;
+	margin-bottom:20px;
+}
+
+#container{
+	width:80%;
+	margin:40px auto;
+}
+
+p{
+	margin:0;
+	padding:0 35px 0 0;
+}
+
+#slider{
+	width:100%;
+	height:450px;
+	position:relative;
+	overflow:hidden;
+	float:left;
+	padding:0;
+	border:#666 solid 2px;
+	border-radius:5px;
+}
+
+#slider img{
+	width:100%;
+	height:450px;
+}
+
+.img1, .img2, .img3, .img4, .img5 {
+	width:100%;
+	margin:0;
+	padding:0;
+} 
+
+
+.slide{
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+.slide:nth-child(1){
+	background:#ce6868;
+}
+
+.slide:nth-child(2){
+	background:#9ab6b6;
+}
+
+.slide:nth-child(3){
+	background:#98cc98;
+}
+
+.slide:nth-child(4){
+	background:#e7b892;
+}
+
+.slide:nth-child(5){
+	background:#c4ad43;
+}
+
+
+.slide-copy{
+	position:absolute;
+	bottom:0;
+	left:0;
+	padding:10px 20px 20px 20px;
+	background:7f7f7f;
+	background: rgba(0,0,0,0.5);
+	width:100%;
+	max-height:32%;
+}
+
+#prev, #next{
+	cursor:pointer;
+	z-index:100;
+	background:#666;
+	height:50px;
+	width:50px;
+	display:inline-block;
+	position:relative;
+	top:250px;
+	margin:0;
+	padding:0;
+	opacity:0.7;
+	filter: alpha(opacity=70);
+}
+
+#next{
+	float:right;
+	right:0px;
+}
+
+#prev{
+	float:left;
+	left:0;
+}
+
+.arrow-right {
+	width: 0; 
+	height: 0; 
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;	
+	border-left: 15px solid #fff;
+	position:relative;
+	top:20%;
+	right:-40%;
+}
+
+.arrow-left {
+	width: 0; 
+	height: 0; 
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;	
+	border-right:15px solid #fff; 
+	position:relative;
+	top:20%;
+	left:30%;
+}
 </style>
 	</head>
 	<!--end::Head-->
@@ -469,6 +601,7 @@ img {
 
 		
 <script>
+	/*
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -504,7 +637,60 @@ function changer() {
 }
 var myTimer = setInterval(changer, 1000);
 source.addEventListener("mouseover", function(){ clearInterval(myTimer)});
-source.addEventListener("mouseout", function(){ myTimer = setInterval(changer, 1000);});
+source.addEventListener("mouseout", function(){ myTimer = setInterval(changer, 1000);});*/
+
+$(document).ready(function(){
+	// options
+	var speed = 500; //transition speed - fade
+	var autoswitch = true; //auto slider options
+	var autoswitch_speed = 5000; //auto slider speed
+	
+	// add first initial active class
+	$(".slide").first().addClass("active");
+	
+	// hide all slides
+	$(".slide").hide;
+	
+	// show only active class slide
+	$(".active").show();
+	
+	// Next Event Handler
+	$('#next').on('click', nextSlide);// call function nextSlide
+	
+	// Prev Event Handler
+	$('#prev').on('click', prevSlide);// call function prevSlide
+	
+	// Auto Slider Handler
+	if(autoswitch == true){
+		setInterval(nextSlide,autoswitch_speed);// call function and value 4000
+	}
+	
+	// Switch to next slide
+	function nextSlide(){
+		$('.active').removeClass('active').addClass('oldActive');
+		if($('.oldActive').is(':last-child')){
+			$('.slide').first().addClass('active');
+		} else {
+			$('.oldActive').next().addClass('active');
+		}
+		$('.oldActive').removeClass('oldActive');
+		$('.slide').fadeOut(speed);
+		$('.active').fadeIn(speed);
+	}
+	
+	// Switch to prev slide
+	function prevSlide(){
+		$('.active').removeClass('active').addClass('oldActive');
+		if($('.oldActive').is(':first-child')){
+			$('.slide').last().addClass('active');
+		} else {
+			$('.oldActive').prev().addClass('active');
+		}
+		$('.oldActive').removeClass('oldActive');
+		$('.slide').fadeOut(speed);
+		$('.active').fadeIn(speed);
+	}
+});
 </script>
 <script src="<?php echo base_url().'theme/js/jquery.magnify.js'?>"></script>
 
