@@ -451,7 +451,7 @@ p{
 									<!--begin::Links-->
 									<div class="d-flex fw-bold flex-column me-20">
 										<!--begin::Subtitle-->
-										<h4 class="fw-bolder text-gray-400 mb-6">Menu Utama</h4>
+										<h4 class="fw-bolder text-gray-400 mb-6">Main Menu</h4>
 										<!--end::Subtitle-->
 										<!--begin::Link-->
 										<a href="<?php echo site_url('');?>" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Home</a>

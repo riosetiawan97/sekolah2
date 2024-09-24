@@ -29,36 +29,257 @@
 						<!--begin::Post-->
 						<div class="d-flex flex-column flex-root">							
 							<!--begin::How It Works Section-->
-							<div class="mb-n10 mb-lg-n20 z-index-2">
-								<!--begin::Container-->
-								<div class="container" style="margin-top:-50px;padding-bottom:600px;">									
-									<!--begin::Product slider-->
-									<div id="next" alt="Next" title="Next">
-										<div class="arrow-right"></div>
-									</div>
-									<div id="prev" alt="Prev" title="Prev">				
-										<div class="arrow-left"></div>
-									</div>			
-									<div id="slider">				
-										<?php $i=1; foreach ($galeri_slider->result() as $row) : ?>
-											<div class="slide">
-												<div class="slide-copy">
-													<h2 style="color:#fff;"><?php echo $row->galeri_judul;?></h2>
-													<p></p>
+							<div class="mb-n10 mb-lg-n20 z-index-0">
+								<div class="bgi-no-repeat bgi-size-contain bgi-position-x-center bgi-position-y-bottom landing-dark-bg" style="background-image: url(<?php echo base_url().'assets/metronic/media/svg/illustrations/landing.svg'?>)">
+									<!--begin::Container-->
+									<div class="container" style="margin-top:-50px;padding-bottom:600px;)">
+										<!--begin::Product slider-->
+										<div id="next" alt="Next" title="Next">
+											<div class="arrow-right"></div>
+										</div>
+										<div id="prev" alt="Prev" title="Prev">				
+											<div class="arrow-left"></div>
+										</div>			
+										<div id="slider">				
+											<?php $i=1; foreach ($galeri_slider->result() as $row) : ?>
+												<div class="slide">
+													<div class="slide-copy">
+														<h2 style="color:#fff;"><?php echo $row->galeri_judul;?></h2>
+														<p></p>
+													</div>
+													<div class="img"><img src="<?php echo base_url().'assets/images/'.$row->galeri_gambar;?>" class="imgslide"></div>
 												</div>
-												<div class="img"><img src="<?php echo base_url().'assets/images/'.$row->galeri_gambar;?>" class="imgslide"></div>
-											</div>
-										<?php $i++; endforeach;?>
+											<?php $i++; endforeach;?>
+										</div>
+									<!--end::Product slider-->
 									</div>
-							<!--end::Product slider-->
+									<!--end::Container-->
 								</div>
-								<!--end::Container-->
 							</div>
 							<!--end::How It Works Section-->
+							<!--begin::Curve bottom-->
+							<div class="landing-curve landing-dark-color mt-20">
+								<svg viewBox="15 12 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0 11C3.93573 11.3356 7.85984 11.6689 11.7725 12H1488.16C1492.1 11.6689 1496.04 11.3356 1500 11V12H1488.16C913.668 60.3476 586.282 60.6117 11.7725 12H0V11Z" fill="currentColor"></path>
+								</svg>
+							</div>
+							<!--end::Curve bottom-->
+
+							<!--begin::Row-->
+							<div class="row gy-5 g-xl-8">
+								<!--begin::Col-->
+								<div class="col-xxl-4">
+									<!--begin::List Widget 5-->
+									<div class="card card-xxl-stretch">
+										<!--begin::Team Section-->
+										<div class="py-10">
+											<!--begin::Container-->
+											<div class="container">												
+												
+												<!--begin::Separator-->
+												<div class="separator separator-dashed mb-9"></div>
+												<!--end::Separator-->
+												<!--begin::Row-->
+												<div class="row">
+													<!--begin::Col-->
+													<div class="col-md-6">
+														<!--begin::Feature post-->
+														<div class="h-100 d-flex flex-column justify-content-between pe-lg-6 mb-lg-0 mb-10">
+															<!--begin::Video-->
+															<div class="mb-3">
+																<iframe class="embed-responsive-item card-rounded h-275px w-100" src="https://www.youtube.com/embed/qIHXpnASPAA" allowfullscreen="allowfullscreen"></iframe>
+															</div>
+															<!--end::Video-->
+														</div>
+														<!--end::Feature post-->
+													</div>
+													<!--end::Col-->
+													<!--begin::Col-->
+													<div class="col-md-6 justify-content-between d-flex flex-column">
+														<!--begin::Post-->
+														<div class="ps-lg-6 mb-16 mt-md-0 mt-17">
+															<!--begin::Body-->
+															<div class="mb-6">
+																<!--begin::Title-->
+																<a href="#" class="fw-bolder text-dark mb-4 fs-2 lh-base text-hover-primary">About Us</a>
+																<!--end::Title-->
+																<!--begin::Text-->
+																<div class="fw-bold fs-5 mt-4 text-gray-600 text-dark">We’ve been focused on making the from v4 to v5 a but we’ve also not been afraid to step away been focused on from v4 to v5 speaker approachable making focused</div>
+																<!--end::Text-->
+															</div>
+															<!--end::Body-->
+															<!--begin::Footer-->
+															<div class="d-flex flex-stack flex-wrap">
+																<!--begin::Item-->
+																<div class="d-flex align-items-center pe-2">
+																	<!--begin::Avatar-->
+																	<div class="symbol symbol-35px symbol-circle me-3">
+																		<img src="assets/media/avatars/150-5.jpg" class="" alt="" />
+																	</div>
+																	<!--end::Avatar-->
+																	<!--begin::Text-->
+																	<div class="fs-5 fw-bolder">
+																		<a href="../../demo1/dist/pages/profile/overview.html" class="text-gray-700 text-hover-primary">Jane Miller</a>
+																		<span class="text-muted">on Apr 27 2021</span>
+																	</div>
+																	<!--end::Text-->
+																</div>
+																<!--end::Item-->
+																<!--begin::Label-->
+																<span class="badge badge-light-info fw-bolder my-2">BLOG</span>
+																<!--end::Label-->
+															</div>
+															<!--end::Footer-->
+														</div>
+														<!--end::Post-->
+													</div>
+													<!--end::Col-->
+												</div>
+												<!--begin::Row-->
+												
+												<!--begin::Separator-->
+												<div class="separator separator-dashed mb-9"></div>
+												<!--end::Separator-->
+												<!--begin::Row-->
+												<div class="row">
+													<!--begin::Col-->
+													<div class="col-md-6 justify-content-between d-flex flex-column">
+														<!--begin::Post-->
+														<div class="ps-lg-6 mb-16 mt-md-0 mt-17">
+															<!--begin::Body-->
+															<div class="mb-6">
+																<!--begin::Title-->
+																<a href="#" class="fw-bolder text-dark mb-4 fs-2 lh-base text-hover-primary">About Us</a>
+																<!--end::Title-->
+																<!--begin::Text-->
+																<div class="fw-bold fs-5 mt-4 text-gray-600 text-dark">We’ve been focused on making the from v4 to v5 a but we’ve also not been afraid to step away been focused on from v4 to v5 speaker approachable making focused</div>
+																<!--end::Text-->
+															</div>
+															<!--end::Body-->
+															<!--begin::Footer-->
+															<div class="d-flex flex-stack flex-wrap">
+																<!--begin::Item-->
+																<div class="d-flex align-items-center pe-2">
+																	<!--begin::Avatar-->
+																	<div class="symbol symbol-35px symbol-circle me-3">
+																		<img src="assets/media/avatars/150-5.jpg" class="" alt="" />
+																	</div>
+																	<!--end::Avatar-->
+																	<!--begin::Text-->
+																	<div class="fs-5 fw-bolder">
+																		<a href="../../demo1/dist/pages/profile/overview.html" class="text-gray-700 text-hover-primary">Jane Miller</a>
+																		<span class="text-muted">on Apr 27 2021</span>
+																	</div>
+																	<!--end::Text-->
+																</div>
+																<!--end::Item-->
+																<!--begin::Label-->
+																<span class="badge badge-light-info fw-bolder my-2">BLOG</span>
+																<!--end::Label-->
+															</div>
+															<!--end::Footer-->
+														</div>
+														<!--end::Post-->
+													</div>
+													<!--end::Col-->
+													<!--begin::Col-->
+													<div class="col-md-6">
+														<!--begin::Feature post-->
+														<div class="h-100 d-flex flex-column justify-content-between pe-lg-6 mb-lg-0 mb-10">
+															<!--begin::Video-->
+															<div class="mb-3">
+																<iframe class="embed-responsive-item card-rounded h-275px w-100" src="https://www.youtube.com/embed/qIHXpnASPAA" allowfullscreen="allowfullscreen"></iframe>
+															</div>
+															<!--end::Video-->
+														</div>
+														<!--end::Feature post-->
+													</div>
+													<!--end::Col-->
+												</div>
+												<!--begin::Row-->
+												
+												<!--begin::Separator-->
+												<div class="separator separator-dashed mb-9"></div>
+												<!--end::Separator-->
+
+											</div>
+											<!--end::Container-->
+										</div>
+										<!--end::Team Section-->
+									</div>
+									<!--end: List Widget 5-->									
+								</div>
+								<!--end::Col-->
+							</div>
+							<!--end::Row-->
+
+							
+							<!--begin::Row-->
+							<div class="row gy-5 g-xl-8">
+								<!--begin::Col-->
+								<div class="col-xxl-4">
+									<!--begin::List Widget 5-->
+									<div class="card card-xxl-stretch">
+										<!--begin::Team Section-->
+										<div class="py-10">
+											<!--begin::Container-->
+											<div class="container">
+												<!--begin::latest instagram-->
+												<div class="">
+													<!--begin::Section-->
+													<div class="m-0">
+														<!--begin::Content-->
+														<div class="d-flex flex-stack">
+															<!--begin::Title-->
+															<h3 class="text-black">Latest Gallery Posts</h3>
+															<!--end::Title-->
+															<!--begin::Link-->
+															<a href="<?php echo site_url('galeri');?>" class="fs-6 fw-bold link-primary">View Gallery</a>
+															<!--end::Link-->
+														</div>
+														<!--end::Content-->
+														<!--begin::Separator-->
+														<div class="separator separator-dashed border-gray-300 mb-9 mt-5"></div>
+														<!--end::Separator-->
+													</div>
+													<!--end::Section-->
+													<!--begin::Row-->
+													<div class="row g-10 row-cols-2 row-cols-lg-5">
+														<?php $i=1; foreach ($album->result() as $row) : ?>
+															<!--begin::Col-->
+															<div class="col">
+																<!--begin::Overlay-->
+																<a class="d-block overlay" data-fslightbox="lightbox-hot-sales" href="<?php echo base_url().'galeri/album/'.$row->album_id;?>">
+																	<!--begin::Image-->
+																	<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px" style="background-image:url('<?php echo base_url().'assets/images/'.$row->album_cover;?>')"></div>
+																	<!--end::Image-->
+																	<!--begin::Action-->
+																	<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+																		<i class="bi bi-eye-fill fs-2x text-white"></i>
+																	</div>
+																	<!--end::Action-->
+																</a>
+															</div>
+															<!--end::Col-->
+														<?php $i++; endforeach;?>
+													</div>
+													<!--begin::Row-->
+												</div>
+												<!--end::latest instagram-->
+											</div>
+											<!--end::Container-->
+										</div>
+										<!--end::Team Section-->
+									</div>
+									<!--end: List Widget 5-->									
+								</div>
+								<!--end::Col-->
+							</div>
+							<!--end::Row-->
 							<!--begin::Statistics Section-->
 							<div class="mt-sm-n10">
 								<!--begin::Curve top-->
-								<div class="landing-curve landing-dark-color" style="z-index: -1;">
+								<div class="landing-curve landing-dark-color" style="z-index: 0;">
 									<svg viewBox="15 -1 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M1 48C4.93573 47.6644 8.85984 47.3311 12.7725 47H1489.16C1493.1 47.3311 1497.04 47.6644 1501 48V47H1489.16C914.668 -1.34764 587.282 -1.61174 12.7725 47H1V48Z" fill="currentColor"></path>
 									</svg>

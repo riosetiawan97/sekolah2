@@ -26,5 +26,10 @@ class M_album extends CI_Model{
 		return $hsl;
 	}
 	
+	//Front-End
+	function get_album_home(){
+		$hsl=$this->db->query("SELECT tbl_album.*,DATE_FORMAT(album_tanggal,'%d/%m/%Y') AS tanggal FROM tbl_album ORDER BY album_id DESC limit 8");
+		return $hsl;
+	}
 
 }

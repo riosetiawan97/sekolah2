@@ -12,6 +12,7 @@ class Home extends CI_Controller{
 		$this->load->model('m_brosur');
 		$this->load->model('m_youtube');
 		$this->load->model('m_faq');
+		$this->load->model('m_album');
 		$this->m_pengunjung->count_visitor();
 	}
 	function index(){
@@ -29,6 +30,7 @@ class Home extends CI_Controller{
 		$x['youtube1']=$this->m_youtube->get_youtube1();
 		$x['youtube2']=$this->m_youtube->get_youtube2();
 		$x['faq']=$this->m_faq->get_faq_home();
+		$x['album']=$this->m_album->get_album_home();
 		$judul_website=$x['setup']->judul_website;
 		//$this->load->view('depan/v_home',$x);
 		$x['title']="$judul_website | Home";
