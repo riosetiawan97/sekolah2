@@ -46,7 +46,7 @@ class Agenda extends CI_Controller{
 		$x['latest']=$this->db->query("SELECT * FROM tbl_agenda ORDER BY agenda_id DESC LIMIT 5");
 		$judul_website=$x['setup']->judul_website;
 		//$this->load->view('depan/v_agenda',$x);
-		$x['title']="$judul_website | Agenda";
+		$x['title']="$judul_website | Event";
 		$this->template->load('template_depan', 'depan/v_agenda', $x);
 	}
 
@@ -67,7 +67,7 @@ class Agenda extends CI_Controller{
 			$x['latest']=$this->db->query("SELECT * FROM tbl_agenda ORDER BY agenda_id DESC LIMIT 5");
 			$judul_website=$x['setup']->judul_website;
 			//$this->load->view('depan/v_blog_detail',$x);
-			$x['title']="$judul_website | Detail Agenda";
+			$x['title']="$judul_website | Detail Event";
 			//$x['title']=$row['tulisan_judul'];
 			$this->template->load('template_depan', 'depan/v_agenda_detail', $x);
 		}else{

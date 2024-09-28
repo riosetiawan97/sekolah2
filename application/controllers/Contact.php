@@ -11,7 +11,7 @@ class Contact extends CI_Controller{
     $x['setup']=$this->m_setup->get_setup()->row();
     $judul_website=$x['setup']->judul_website;
 		  //$this->load->view('depan/v_contact');      
-      $x['title']="$judul_website | Contact";
+      $x['title']="$judul_website | Contact Us";
       $this->template->load('template_depan', 'depan/v_contact', $x);
 	}
 

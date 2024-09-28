@@ -6,7 +6,7 @@
 			<!--begin::Page title-->
 			<div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
 				<!--begin::Title-->
-				<h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Data Agenda</h1>
+				<h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Data Event</h1>
 				<!--end::Title-->
                 <!--begin::Separator-->
                 <span class="h-20px border-gray-200 border-start mx-4"></span>
@@ -24,7 +24,7 @@
                     </li>
                     <!--end::Item-->
                     <!--begin::Item-->
-                    <li class="breadcrumb-item text-muted">Agenda</li>
+                    <li class="breadcrumb-item text-muted">Event</li>
                     <!--end::Item-->
                     <!--begin::Item-->
                     <li class="breadcrumb-item">
@@ -32,7 +32,7 @@
                     </li>
                     <!--end::Item-->
                     <!--begin::Item-->
-                    <li class="breadcrumb-item text-dark">List Agenda</li>
+                    <li class="breadcrumb-item text-dark">List Event</li>
                     <!--end::Item-->
                 </ul>
                 <!--end::Breadcrumb-->
@@ -45,7 +45,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
                 </svg>
-                Add Agenda</a>
+                Add Event</a>
 				<!--end::Button-->
 			</div>
 			<!--end::Actions-->
@@ -68,7 +68,7 @@
                 <thead>
                 <tr>
 					          <th style="width:70px;">#</th>
-                    <th>Agenda</th>
+                    <th>Event</th>
                     <th>Date</th>
                     <th>Place</th>
                     <th>Time</th>
@@ -153,15 +153,15 @@
 							<!--end::Svg Icon-->
 						</div>
 						<!--end::Close-->
-                        <h4 class="modal-title" id="myModalLabel">Add Agenda</h4>
+                        <h4 class="modal-title" id="myModalLabel">Add Event</h4>
                     </div>
                     <form class="form-horizontal" action="<?php echo base_url().'admin/agenda/simpan_agenda'?>" method="post" enctype="multipart/form-data">
                     <div class="modal-body">
 
                         <div class="form-group mb-4">
-                            <label for="inputUserName" class="col-sm-4 control-label">Agenda Name</label>
+                            <label for="inputUserName" class="col-sm-4 control-label">Event Name</label>
                             <div class="col-sm-7">
-                                <input type="text" name="xnama_agenda" class="form-control" id="inputUserName" placeholder="Agenda Name" required>
+                                <input type="text" name="xnama_agenda" class="form-control" id="inputUserName" placeholder="Event Name" required>
                             </div>
                         </div>
                         <div class="form-group mb-4">
@@ -266,13 +266,13 @@
 							<!--end::Svg Icon-->
 						</div>
 						<!--end::Close-->
-                        <h4 class="modal-title" id="myModalLabel">Edit Agenda</h4>
+                        <h4 class="modal-title" id="myModalLabel">Edit Event</h4>
                     </div>
                     <form class="form-horizontal" action="<?php echo base_url().'admin/agenda/update_agenda'?>" method="post" enctype="multipart/form-data">
                     <div class="modal-body">
 
                             <div class="form-group mb-4">
-                                <label for="inputUserName" class="col-sm-4 control-label">Agenda Name</label>
+                                <label for="inputUserName" class="col-sm-4 control-label">Event Name</label>
                                 <div class="col-sm-7">
                                   <input type="hidden" name="kode" value="<?php echo $agenda_id;?>">
                                   <input type="hidden" value="<?php echo $agenda_gambar;?>" name="gambar">
@@ -381,13 +381,13 @@
 							<!--end::Svg Icon-->
 						</div>
 						<!--end::Close-->
-                        <h4 class="modal-title" id="myModalLabel">Hapus Agenda</h4>
+                        <h4 class="modal-title" id="myModalLabel">Delete Event</h4>
                     </div>
                     <form class="form-horizontal" action="<?php echo base_url().'admin/agenda/hapus_agenda'?>" method="post" enctype="multipart/form-data">
                     <div class="modal-body">
 							<input type="hidden" name="kode" value="<?php echo $agenda_id;?>"/>
                             <input type="hidden" value="<?php echo $agenda_gambar;?>" name="gambar">
-                            <p>Are You sure want to delete agenda <b><?php echo $agenda_nama;?></b> ?</p>
+                            <p>Are You sure want to delete Event <b><?php echo $agenda_nama;?></b> ?</p>
 
                     </div>
                     <div class="modal-footer">

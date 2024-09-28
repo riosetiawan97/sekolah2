@@ -16,7 +16,7 @@ class Visimisi extends CI_Controller{
 		$x['setup']=$this->m_setup->get_setup()->row();
 		$judul_website=$x['setup']->judul_website;
 		//$this->load->view('admin/v_tulisan',$x);
-		$x['title']="Admin $judul_website | Visi Misi";
+		$x['title']="Admin $judul_website | Vision and Mission";
 		$this->template->load('template_admin', 'admin/v_visimisi', $x);
 	}
 

@@ -32,7 +32,7 @@
                     </li>
                     <!--end::Item-->
                     <!--begin::Item-->
-                    <li class="breadcrumb-item text-dark">Edit Visi Misi</li>
+                    <li class="breadcrumb-item text-dark">Edit Vision and Mission</li>
                     <!--end::Item-->
                 </ul>
                 <!--end::Breadcrumb-->
@@ -59,7 +59,7 @@
   <!-- SELECT2 EXAMPLE -->
   <div class="box box-default">
     <div class="box-header with-border mb-4">
-      <h3 class="box-title">Update Visi Misi</h3>
+      <h3 class="box-title">Update Vision and Mission</h3>
     </div>
 <?php
     $b=$data->row_array();
@@ -69,15 +69,15 @@
     <div class="box-body">
       <input type="hidden" name="id" value="<?php echo $b['id'];?>">
       <div class="form-group mb-4">
-        <label>Gambar Visi Misi</label>
+        <label>Vision and Mission Picture</label>
         <input type="file" name="gambarvisimisi" style="width: 100%;">
       </div>
       <div class="form-group mb-4">
-        <label>Visi</label>
+        <label>Vision</label>
         <textarea class="ckeditor" name="visi" class="form-control" rows="3" placeholder="Visi" id="visi"><?php echo $b['visi'];?></textarea>
       </div>  
       <div class="form-group mb-4">
-        <label>Misi</label>
+        <label>Mission</label>
         <textarea class="ckeditor" name="misi" class="form-control" rows="3" placeholder="Misi" id="misi"><?php echo $b['misi'];?></textarea>
       </div>      
     </div>

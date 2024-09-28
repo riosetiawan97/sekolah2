@@ -86,8 +86,8 @@
 														<!--begin::Feature post-->
 														<div class="h-100 d-flex flex-column justify-content-between pe-lg-6 mb-lg-0 mb-10">
 															<!--begin::Video-->
-															<div class="mb-3">
-																<iframe class="embed-responsive-item card-rounded h-275px w-100" src="https://www.youtube.com/embed/qIHXpnASPAA" allowfullscreen="allowfullscreen"></iframe>
+															<div class="mb-3">																
+																<img src="<?php echo base_url().'assets/images/'.$setup->gambarabout?>" class="img-fluid card-rounded h-275px w-100" alt="#">
 															</div>
 															<!--end::Video-->
 														</div>
@@ -104,32 +104,10 @@
 																<a href="#" class="fw-bolder text-dark mb-4 fs-2 lh-base text-hover-primary">About Us</a>
 																<!--end::Title-->
 																<!--begin::Text-->
-																<div class="fw-bold fs-5 mt-4 text-gray-600 text-dark">We’ve been focused on making the from v4 to v5 a but we’ve also not been afraid to step away been focused on from v4 to v5 speaker approachable making focused</div>
+																<div class="fw-bold fs-5 mt-4 text-dark"><?php echo $setup->about ?></div>
 																<!--end::Text-->
 															</div>
 															<!--end::Body-->
-															<!--begin::Footer-->
-															<div class="d-flex flex-stack flex-wrap">
-																<!--begin::Item-->
-																<div class="d-flex align-items-center pe-2">
-																	<!--begin::Avatar-->
-																	<div class="symbol symbol-35px symbol-circle me-3">
-																		<img src="assets/media/avatars/150-5.jpg" class="" alt="" />
-																	</div>
-																	<!--end::Avatar-->
-																	<!--begin::Text-->
-																	<div class="fs-5 fw-bolder">
-																		<a href="../../demo1/dist/pages/profile/overview.html" class="text-gray-700 text-hover-primary">Jane Miller</a>
-																		<span class="text-muted">on Apr 27 2021</span>
-																	</div>
-																	<!--end::Text-->
-																</div>
-																<!--end::Item-->
-																<!--begin::Label-->
-																<span class="badge badge-light-info fw-bolder my-2">BLOG</span>
-																<!--end::Label-->
-															</div>
-															<!--end::Footer-->
 														</div>
 														<!--end::Post-->
 													</div>
@@ -143,43 +121,56 @@
 												<!--begin::Row-->
 												<div class="row">
 													<!--begin::Col-->
-													<div class="col-md-6 justify-content-between d-flex flex-column">
-														<!--begin::Post-->
-														<div class="ps-lg-6 mb-16 mt-md-0 mt-17">
-															<!--begin::Body-->
-															<div class="mb-6">
-																<!--begin::Title-->
-																<a href="#" class="fw-bolder text-dark mb-4 fs-2 lh-base text-hover-primary">About Us</a>
-																<!--end::Title-->
-																<!--begin::Text-->
-																<div class="fw-bold fs-5 mt-4 text-gray-600 text-dark">We’ve been focused on making the from v4 to v5 a but we’ve also not been afraid to step away been focused on from v4 to v5 speaker approachable making focused</div>
-																<!--end::Text-->
-															</div>
-															<!--end::Body-->
-															<!--begin::Footer-->
-															<div class="d-flex flex-stack flex-wrap">
-																<!--begin::Item-->
-																<div class="d-flex align-items-center pe-2">
-																	<!--begin::Avatar-->
-																	<div class="symbol symbol-35px symbol-circle me-3">
-																		<img src="assets/media/avatars/150-5.jpg" class="" alt="" />
-																	</div>
-																	<!--end::Avatar-->
-																	<!--begin::Text-->
-																	<div class="fs-5 fw-bolder">
-																		<a href="../../demo1/dist/pages/profile/overview.html" class="text-gray-700 text-hover-primary">Jane Miller</a>
-																		<span class="text-muted">on Apr 27 2021</span>
-																	</div>
-																	<!--end::Text-->
+													<div class="col-md-6 justify-content-between d-flex flex-column">														
+														<!--begin::Input group-->
+														<div class="fv-row">
+															<!--begin::Row-->
+															<div class="row">
+																<!--begin::Col-->
+																<div class="col-lg-12">
+																	<!--begin::Option-->																	
+																	<a href="<?php echo site_url('alur_pendaftaran');?>" class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center mb-10 border border-hover-primary" for="kt_create_account_form_account_type_personal">
+																		<!--begin::Svg Icon | path: icons/duotune/communication/com005.svg-->
+																		<span class="svg-icon svg-icon-3x me-5">
+																			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bezier2" viewBox="0 0 16 16">
+																				<path fill-rule="evenodd" d="M1 2.5A1.5 1.5 0 0 1 2.5 1h1A1.5 1.5 0 0 1 5 2.5h4.134a1 1 0 1 1 0 1h-2.01q.269.27.484.605C8.246 5.097 8.5 6.459 8.5 8c0 1.993.257 3.092.713 3.7.356.476.895.721 1.787.784A1.5 1.5 0 0 1 12.5 11h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5H6.866a1 1 0 1 1 0-1h1.711a3 3 0 0 1-.165-.2C7.743 11.407 7.5 10.007 7.5 8c0-1.46-.246-2.597-.733-3.355-.39-.605-.952-1-1.767-1.112A1.5 1.5 0 0 1 3.5 5h-1A1.5 1.5 0 0 1 1 3.5zM2.5 2a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10 10a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
+																			</svg>
+																		</span>
+																		<!--end::Svg Icon-->
+																		<!--begin::Info-->
+																		<span class="d-block fw-bold text-start">
+																			<span class="fw-bolder d-block fs-4 mb-2">How To Apply ?</span>
+																		</span>
+																		<!--end::Info-->
+																	</a>
+																	<!--end::Option-->
 																</div>
-																<!--end::Item-->
-																<!--begin::Label-->
-																<span class="badge badge-light-info fw-bolder my-2">BLOG</span>
-																<!--end::Label-->
+																<!--end::Col-->
+																<!--begin::Col-->
+																<div class="col-lg-12">
+																	<!--begin::Option-->
+																	
+																	<a href="<?php echo $setup->formpendaftaran;?>" class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center border border-hover-primary" for="kt_create_account_form_account_type_corporate">
+																		<!--begin::Svg Icon | path: icons/duotune/finance/fin006.svg-->
+																		<span class="svg-icon svg-icon-3x me-5">
+																			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark" viewBox="0 0 16 16">
+																				<path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z"/>
+																			</svg>
+																		</span>
+																		<!--end::Svg Icon-->
+																		<!--begin::Info-->
+																		<span class="d-block fw-bold text-start">
+																			<span class="fw-bolder d-block fs-4 mb-2">Addmission</span>
+																		</span>
+																		<!--end::Info-->
+																	</a>
+																	<!--end::Option-->
+																</div>
+																<!--end::Col-->
 															</div>
-															<!--end::Footer-->
+															<!--end::Row-->
 														</div>
-														<!--end::Post-->
+														<!--end::Input group-->
 													</div>
 													<!--end::Col-->
 													<!--begin::Col-->
@@ -188,7 +179,7 @@
 														<div class="h-100 d-flex flex-column justify-content-between pe-lg-6 mb-lg-0 mb-10">
 															<!--begin::Video-->
 															<div class="mb-3">
-																<iframe class="embed-responsive-item card-rounded h-275px w-100" src="https://www.youtube.com/embed/qIHXpnASPAA" allowfullscreen="allowfullscreen"></iframe>
+																<iframe class="embed-responsive-item card-rounded h-275px w-100" src="https://www.youtube.com/embed/<?php echo substr($youtube1->youtube_link, strpos($youtube1->youtube_link,"v=")+2); ?>" allowfullscreen="allowfullscreen"></iframe>
 															</div>
 															<!--end::Video-->
 														</div>

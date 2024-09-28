@@ -13,7 +13,7 @@ class Alur_Pendaftaran extends CI_Controller{
 		$x['setup']=$this->m_setup->get_setup()->row();
 		$x['brosur']=$this->m_brosur->get_brosur()->row();
 		$judul_website=$x['setup']->judul_website;
-		$x['title']="$judul_website | Alur Pendaftaran";
+		$x['title']="$judul_website | How To Apply";
 		$this->template->load('template_depan', 'depan/v_alur_pendaftaran', $x);
 	}
 }

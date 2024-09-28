@@ -68,8 +68,8 @@
                 <thead>
                 <tr>
 					<th style="width:100px;">#</th>
-                    <th>Kategori</th>
-                    <th style="text-align:right;">Aksi</th>
+                    <th>Category</th>
+                    <th style="text-align:right;">Action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -144,9 +144,9 @@
                     <div class="modal-body">
 
                                     <div class="form-group mb-4">
-                                        <label for="inputUserName" class="col-sm-4 control-label">Kategori</label>
+                                        <label for="inputUserName" class="col-sm-4 control-label">Category</label>
                                         <div class="col-sm-7">
-                                            <input type="text" name="xkategori" class="form-control" id="inputUserName" placeholder="Kategori" required>
+                                            <input type="text" name="xkategori" class="form-control" id="inputUserName" placeholder="Category" required>
                                         </div>
                                     </div>
 
@@ -188,7 +188,7 @@
                     <div class="modal-body">
 
                                     <div class="form-group mb-4">
-                                        <label for="inputUserName" class="col-sm-4 control-label">Kategori</label>
+                                        <label for="inputUserName" class="col-sm-4 control-label">Category</label>
                                         <div class="col-sm-7">
 											<input type="hidden" name="kode" value="<?php echo $kategori_id;?>"/>
                                             <input type="text" name="xkategori" class="form-control" id="inputUserName" value="<?php echo $kategori_nama;?>" placeholder="Kategori" required>

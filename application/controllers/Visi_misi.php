@@ -9,7 +9,7 @@ class visi_misi extends CI_Controller{
 		$x['setup']=$this->m_setup->get_setup()->row();
 		$judul_website=$x['setup']->judul_website;
 		//$this->load->view('depan/v_visi_misi');
-		$x['title']="$judul_website | Visi Misi";
+		$x['title']="$judul_website | Vision & Mision";
 		$this->template->load('template_depan', 'depan/v_visimisi', $x);
 	}
 }

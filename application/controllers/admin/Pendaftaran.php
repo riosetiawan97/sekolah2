@@ -16,7 +16,7 @@ class Pendaftaran extends CI_Controller{
 		$x['setup']=$this->m_setup->get_setup()->row();
 		$judul_website=$x['setup']->judul_website;
 		//$this->load->view('admin/v_tulisan',$x);
-		$x['title']="Admin $judul_website | Pendaftaran";
+		$x['title']="Admin $judul_website | Registration";
 		$this->template->load('template_admin', 'admin/v_pendaftaran', $x);
 	}
 

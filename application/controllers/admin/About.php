@@ -16,7 +16,7 @@ class About extends CI_Controller{
 		$x['setup']=$this->m_setup->get_setup()->row();
 		$judul_website=$x['setup']->judul_website;
 		//$this->load->view('admin/v_tulisan',$x);
-		$x['title']="Admin $judul_website | About";
+		$x['title']="Admin $judul_website | About Us";
 		$this->template->load('template_admin', 'admin/v_about', $x);
 	}
 

@@ -17,7 +17,7 @@ class Pengumuman extends CI_Controller{
 		$x['setup']=$this->m_setup->get_setup()->row();
 		$judul_website=$x['setup']->judul_website;
 		//$this->load->view('admin/v_pengumuman',$x);
-		$x['title']="Admin $judul_website | Pengumuman";
+		$x['title']="Admin $judul_website | Announcement";
 		$this->template->load('template_admin', 'admin/v_pengumuman', $x);
 	}
 

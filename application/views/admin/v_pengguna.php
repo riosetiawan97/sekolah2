@@ -68,13 +68,13 @@
                 <thead>
                 <tr>
 					<th>Photo</th>
-                    <th>Nama</th>
+                    <th>Name</th>
                     <th>Email</th>
-                    <th>Jenis Kelamin</th>
+                    <th>Gender</th>
                     <th>Password</th>
-                    <th>Kontak</th>
+                    <th>Contact Person</th>
                     <th>Level</th>
-                    <th style="text-align:center;">Aksi</th>
+                    <th style="text-align:center;">Action</th>
                 </tr>
                 </thead>
                 <tbody>

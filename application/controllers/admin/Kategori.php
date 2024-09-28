@@ -17,7 +17,7 @@ class Kategori extends CI_Controller{
 		$x['setup']=$this->m_setup->get_setup()->row();
 		$judul_website=$x['setup']->judul_website;
 		//$this->load->view('admin/v_kategori',$x);
-		$x['title']="Admin $judul_website | Kategori";
+		$x['title']="Admin $judul_website | Category";
 		$this->template->load('template_admin', 'admin/v_kategori', $x);
 	}
 

@@ -14,7 +14,7 @@ class Galeri extends CI_Controller{
 		$x['alb']=$this->m_album->get_all_album();
 		$x['all_galeri']=$this->m_galeri->get_all_galeri();
 		//$this->load->view('depan/v_galeri',$x);
-		$x['title']="$judul_website | Galeri";
+		$x['title']="$judul_website | Gallery";
 		$this->template->load('template_depan', 'depan/v_galeri', $x);
 	}
 	function album(){

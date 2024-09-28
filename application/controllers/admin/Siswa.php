@@ -168,7 +168,7 @@ class Siswa extends CI_Controller{
 		$x['setup']=$this->m_setup->get_setup()->row();
 		$nama_sekolah=$x['setup']->nama_sekolah;
 		//$this->load->view('admin/v_guru',$x);
-		$x['title']="Admin $nama_sekolah | Absen Siswa";
+		$x['title']="Admin $nama_sekolah | Student Attendance";
 		$this->template->load('template_admin', 'admin/v_absen_siswa', $x);
 	}
 

@@ -60,7 +60,7 @@
                 <th>Date</th>
                 <th>Author</th>
                 <th>Type</th>
-                <th style="text-align:right;">Aksi</th>
+                <th style="text-align:right;">Action</th>
             </tr>
             </thead>
             <tbody>
@@ -130,7 +130,7 @@
                         <!--end::Svg Icon-->
                       </div>
                       <!--end::Close-->
-                      <h4 class="modal-title" id="myModalLabel">Edit Brosur</h4>
+                      <h4 class="modal-title" id="myModalLabel">Edit Brochure</h4>
                 </div>
                 <form class="form-horizontal" action="<?php echo base_url().'admin/brosur/update_brosur'?>" method="post" enctype="multipart/form-data">
                 <div class="modal-body">
@@ -139,7 +139,7 @@
                     <input type="hidden" name="type" value="<?php echo $type;?>"/>
 
                         <div class="form-group mb-4">
-                            <label for="inputUserName" class="col-sm-4 control-label">Cover Brosur</label>
+                            <label for="inputUserName" class="col-sm-4 control-label">Cover Brochure</label>
                             <div class="col-sm-7">
                                 <input type="file" name="filefoto"/>
                             </div>

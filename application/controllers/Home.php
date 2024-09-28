@@ -27,7 +27,7 @@ class Home extends CI_Controller{
 		$x['tot_agenda']=$this->db->get('tbl_agenda')->num_rows();
 		$x['brosur']=$this->m_brosur->get_brosur();
 		$x['pamflet']=$this->m_brosur->get_pamflet();
-		$x['youtube1']=$this->m_youtube->get_youtube1();
+		$x['youtube1']=$this->m_youtube->get_youtube1()->row();
 		$x['youtube2']=$this->m_youtube->get_youtube2();
 		$x['faq']=$this->m_faq->get_faq_home();
 		$x['album']=$this->m_album->get_album_home();

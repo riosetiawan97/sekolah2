@@ -47,7 +47,7 @@ class Blog extends CI_Controller{
 			$x['setup']=$this->m_setup->get_setup()->row();
 			$judul_website=$x['setup']->judul_website;
 			//$this->load->view('depan/v_blog',$x);
-			$x['title']="$judul_website | Blog";
+			$x['title']="$judul_website | News";
 			$this->template->load('template_depan', 'depan/v_blog', $x);
 	}
 	function detail($slugs){
@@ -74,7 +74,7 @@ class Blog extends CI_Controller{
 			$judul_website=$x['setup']->judul_website;
 			//$this->load->view('depan/v_blog_detail',$x);
 			//$x['title']="$judul_website | Detail Blog";
-			$x['title']=$row['tulisan_judul'];
+			$x['title']=$row['tulisan_judul'].' | '.$judul_website;
 			$x['gambar']=$row['tulisan_gambar'];
 			$this->template->load('template_depan', 'depan/v_blog_detail', $x);
 		}else{

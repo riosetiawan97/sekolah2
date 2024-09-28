@@ -19,7 +19,7 @@ class Tulisan extends CI_Controller{
 		$judul_website=$x['setup']->judul_website;
 		$x['data']=$this->m_tulisan->get_all_tulisan();
 		//$this->load->view('admin/v_tulisan',$x);
-		$x['title']="Admin $judul_website | Tulisan";
+		$x['title']="Admin $judul_website | News";
 		$this->template->load('template_admin', 'admin/v_tulisan', $x);
 	}
 	function add_tulisan(){
@@ -27,7 +27,7 @@ class Tulisan extends CI_Controller{
 		$judul_website=$x['setup']->judul_website;
 		$x['kat']=$this->m_kategori->get_all_kategori();
 		//$this->load->view('admin/v_add_tulisan',$x);
-		$x['title']="Admin $judul_website | Add Tulisan";
+		$x['title']="Admin $judul_website | Add News";
 		$this->template->load('template_admin', 'admin/v_add_tulisan', $x);
 	}
 	function get_edit(){
@@ -37,7 +37,7 @@ class Tulisan extends CI_Controller{
 		$x['data']=$this->m_tulisan->get_tulisan_by_kode($kode);
 		$x['kat']=$this->m_kategori->get_all_kategori();
 		//$this->load->view('admin/v_edit_tulisan',$x);
-		$x['title']="Admin $judul_website | Edit Tulisan | ".$x['data']->row()->tulisan_judul .")";
+		$x['title']="Admin $judul_website | Edit News | ".$x['data']->row()->tulisan_judul .")";
 		$this->template->load('template_admin', 'admin/v_edit_tulisan', $x);
 	}
 	function simpan_tulisan(){
