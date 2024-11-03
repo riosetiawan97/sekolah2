@@ -68,7 +68,7 @@
 							<!--begin::Row-->
 							<div class="row gy-5 g-xl-8">
 								<!--begin::Col-->
-								<div class="col-xxl-4">
+								<div class="col-xxl-12">
 									<!--begin::List Widget 5-->
 									<div class="card card-xxl-stretch">
 										<!--begin::Team Section-->
@@ -208,7 +208,7 @@
 							<!--begin::Row-->
 							<div class="row gy-5 g-xl-8">
 								<!--begin::Col-->
-								<div class="col-xxl-4">
+								<div class="col-xxl-12">
 									<!--begin::List Widget 5-->
 									<div class="card card-xxl-stretch">
 										<!--begin::Team Section-->
@@ -457,7 +457,7 @@
 							<!--begin::Row-->
 							<div class="row gy-5 g-xl-8">
 								<!--begin::Col-->
-								<div class="col-xxl-4">
+								<div class="col-xxl-12">
 									<!--begin::List Widget 5-->
 									<div class="card card-xxl-stretch">
 										<!--begin::Team Section-->

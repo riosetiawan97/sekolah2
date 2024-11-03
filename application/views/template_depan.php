@@ -14,13 +14,13 @@ License: For each use you must have a valid license purchased only from above li
 	<!--begin::Head-->
 	<head><base href="../">
     	<title><?php echo $title ?></title>
-		<meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue &amp; Laravel versions. Grab your copy now and get life-time updates for free." />
-		<meta name="keywords" content="Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
+		<meta name="description" content="SMP Islam Al-Hadiriyah adalah SMP Islam di Duren Sawit, Jakarta Timur" />
+		<meta name="keywords" content="SMP Islam Al-Hadiriyah adalah SMP Islam di Duren Sawit, Jakarta Timur" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta charset="utf-8" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Metronic - Bootstrap 5 HTML, VueJS, React, Angular &amp; Laravel Admin Dashboard Theme" />
+		<meta property="og:title" content="SMP Islam Al-Hadiriyah" />
 		<meta property="og:url" content="https://keenthemes.com/metronic" />
 		<meta property="og:site_name" content="Keenthemes | Metronic" />
 		<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
@@ -38,11 +38,6 @@ License: For each use you must have a valid license purchased only from above li
 		<link href="<?php echo base_url().'theme/css/jquery.magnify.css'?>" rel="stylesheet">
 		<link href="<?php echo base_url().'theme/css/magnify-white-theme.css'?>" rel="stylesheet">
 		<style>
-body {
-  font-family: Arial;
-  margin: 0;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -145,11 +140,6 @@ img {
 	padding:0;
 }
 
-body{
-	font-family:'Arial', sans-serif;
-	font-size:14px;
-	line-height:1.6em;
-}
 
 h1{
 	text-align:center;
@@ -360,6 +350,11 @@ p{
 													<span class="menu-title">Contact Us</span>
 												</a>
 											</div>
+											<div class="menu-item me-lg-1">
+												<a class="menu-link py-3" href="<?php echo site_url('siswa');?>">
+													<span class="menu-title">Student Attendance</span>
+												</a>
+											</div>
 											<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
 												<span class="menu-link py-3">
 													<span class="menu-title">PPDB</span>
@@ -405,6 +400,22 @@ p{
 								<!--begin::Topbar-->
 								<div class="d-flex align-items-stretch flex-shrink-0">
 									<!--begin::Toolbar wrapper-->
+									<div class="d-flex align-items-stretch flex-shrink-0">
+										<!--begin::Heaeder menu toggle-->
+										<div class="d-flex align-items-center d-lg-none ms-2 me-n3" title="Show header menu">
+											<div class="btn btn-icon btn-active-light-primary w-30px h-30px w-md-40px h-md-40px" id="kt_header_menu_mobile_toggle">
+												<!--begin::Svg Icon | path: icons/duotune/text/txt001.svg-->
+												<span class="svg-icon svg-icon-1">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+														<path d="M13 11H3C2.4 11 2 10.6 2 10V9C2 8.4 2.4 8 3 8H13C13.6 8 14 8.4 14 9V10C14 10.6 13.6 11 13 11ZM22 5V4C22 3.4 21.6 3 21 3H3C2.4 3 2 3.4 2 4V5C2 5.6 2.4 6 3 6H21C21.6 6 22 5.6 22 5Z" fill="black" />
+														<path opacity="0.3" d="M21 16H3C2.4 16 2 15.6 2 15V14C2 13.4 2.4 13 3 13H21C21.6 13 22 13.4 22 14V15C22 15.6 21.6 16 21 16ZM14 20V19C14 18.4 13.6 18 13 18H3C2.4 18 2 18.4 2 19V20C2 20.6 2.4 21 3 21H13C13.6 21 14 20.6 14 20Z" fill="black" />
+													</svg>
+												</span>
+												<!--end::Svg Icon-->
+											</div>
+										</div>
+										<!--end::Heaeder menu toggle-->
+									</div>
 									<!--end::Toolbar wrapper-->
 								</div>
 								<!--end::Topbar-->

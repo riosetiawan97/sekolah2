@@ -22,7 +22,7 @@ class Siswa extends CI_Controller{
 		$kelas=$this->input->post('kelas',TRUE);
 		$jurusan=$this->input->post('jurusan',TRUE);
 		$this->m_siswa->simpan_absen_siswa($tipe,$nama,$kelas,$jurusan,date('Ymd'),date('His'));
-		echo $this->session->set_flashdata('msg','<br><p><strong> NB: </strong> Terima Kasih Sudah Absen.</p>');
+		echo $this->session->set_flashdata('msg','<br><p><strong> NB: </strong> Thank You for Your Attendance.</p>');
 		redirect('siswa');
 	  }
 
