@@ -47,13 +47,14 @@ class Album extends CI_Controller{
 
 				$gambar=$gbr['file_name'];
 				$album=strip_tags($this->input->post('xnama_album'));
+				$show_home=$this->input->post('show_home');
 				$deskripsi=$this->input->post('deskripsi');
 				$kode=$this->session->userdata('idadmin');
 				$user=$this->m_pengguna->get_pengguna_login($kode);
 				$p=$user->row_array();
 				$user_id=$p['pengguna_id'];
 				$user_nama=$p['pengguna_nama'];
-				$this->m_album->simpan_album($album,$user_id,$user_nama,$gambar,$deskripsi);
+				$this->m_album->simpan_album($album,$user_id,$user_nama,$gambar,$deskripsi,$show_home);
 				echo $this->session->set_flashdata('msg','success');
 				redirect('admin/album');
 			}else{
@@ -94,6 +95,7 @@ class Album extends CI_Controller{
 				$gambar=$gbr['file_name'];
 				$album_id=$this->input->post('kode');
 				$album_nama=strip_tags($this->input->post('xnama_album'));
+				$show_home=$this->input->post('show_home');
 				$deskripsi=$this->input->post('deskripsi');
 				$images=$this->input->post('gambar');
 				$path='./assets/images/'.$images;
@@ -103,7 +105,7 @@ class Album extends CI_Controller{
 				$p=$user->row_array();
 				$user_id=$p['pengguna_id'];
 				$user_nama=$p['pengguna_nama'];
-				$this->m_album->update_album($album_id,$album_nama,$user_id,$user_nama,$gambar,$deskripsi);
+				$this->m_album->update_album($album_id,$album_nama,$user_id,$user_nama,$gambar,$deskripsi,$show_home);
 				echo $this->session->set_flashdata('msg','info');
 				redirect('admin/album');	                    
 			}else{
@@ -113,12 +115,13 @@ class Album extends CI_Controller{
 		}else{
 			$album_id=$this->input->post('kode');
 			$album_nama=strip_tags($this->input->post('xnama_album'));
+			$show_home=$this->input->post('show_home');
 			$kode=$this->session->userdata('idadmin');
 			$user=$this->m_pengguna->get_pengguna_login($kode);
 			$p=$user->row_array();
 			$user_id=$p['pengguna_id'];
 			$user_nama=$p['pengguna_nama'];
-			$this->m_album->update_album_tanpa_img($album_id,$album_nama,$user_id,$user_nama,$deskripsi);
+			$this->m_album->update_album_tanpa_img($album_id,$album_nama,$user_id,$user_nama,$deskripsi,$show_home);
 			echo $this->session->set_flashdata('msg','info');
 			redirect('admin/album');
 		}

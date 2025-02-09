@@ -71,6 +71,7 @@
                 <th>Album</th>
                 <th>Date</th>
                 <th>Author</th>
+                <th>Show Home</th>
                 <th>Total Picture</th>
                 <th style="text-align:right;">Action</th>
             </tr>
@@ -86,13 +87,14 @@
                     $album_author=$i['album_author'];
                     $album_cover=$i['album_cover'];
                     $album_jumlah=$i['album_count'];
-
+                    $album_show_home=$i['show_home'];
                 ?>
             <tr>
               <td><img src="<?php echo base_url().'assets/images/'.$album_cover;?>" style="width:80px;"></td>
               <td><?php echo $album_nama;?></td>
               <td><?php echo $album_tanggal;?></td>
               <td><?php echo $album_author;?></td>
+              <td><?php echo $album_show_home;?></td>
               <td><?php echo $album_jumlah;?></td>
               <td style="text-align:right;">
                 <a class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1" data-bs-toggle="modal" data-bs-target="#ModalEdit<?php echo $album_id;?>">
@@ -166,6 +168,12 @@
                         </div>
                     </div>
                     <div class="form-group mb-4">
+                    <label class="col-sm-4 control-label">Show Home</label>
+                        <div class="col-sm-12">
+                        <input type="checkbox" name="show_home" value="1">
+                        </div>
+                    </div>
+                    <div class="form-group mb-4">
                         <label for="inputDeskripsi" class="col-sm-4 control-label">Description</label>
                         <div class="col-sm-12">
                             <textarea class="ckeditor" name="deskripsi" required></textarea>
@@ -191,49 +199,56 @@
           $album_cover=$i['album_cover'];
           $album_jumlah=$i['album_count'];
           $album_deskripsi=$i['album_deskripsi'];
+          $album_show_home=$i['show_home'];
         ?>
 
     <div class="modal fade" id="ModalEdit<?php echo $album_id;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                        <!--begin::Close-->
-						<div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
-							<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
-							<span class="svg-icon svg-icon-1">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-									<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
-									<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
-								</svg>
-							</span>
-							<!--end::Svg Icon-->
-						</div>
-						<!--end::Close-->
-                        <h4 class="modal-title" id="myModalLabel">Edit Album</h4>
+                    <!--begin::Close-->
+                    <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                        <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                        <span class="svg-icon svg-icon-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
+                                <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
+                            </svg>
+                        </span>
+                        <!--end::Svg Icon-->
+                    </div>
+                    <!--end::Close-->
+                    <h4 class="modal-title" id="myModalLabel">Edit Album</h4>
                 </div>
                 <form class="form-horizontal" action="<?php echo base_url().'admin/album/update_album'?>" method="post" enctype="multipart/form-data">
                 <div class="modal-body">
-                            <input type="hidden" name="kode" value="<?php echo $album_id;?>"/>
-                            <input type="hidden" value="<?php echo $album_cover;?>" name="gambar">
-                                <div class="form-group mb-4">
-                                    <label for="inputUserName" class="col-sm-4 control-label">Album Name</label>
-                                    <div class="col-sm-12">
-                                        <input type="text" name="xnama_album" class="form-control" value="<?php echo $album_nama;?>" id="inputUserName" placeholder="Album Name" required>
-                                    </div>
-                                </div>
-
-                                <div class="form-group mb-4">
-                                    <label for="inputUserName" class="col-sm-4 control-label">Cover Album</label>
-                                    <div class="col-sm-12">
-                                        <input type="file" name="filefoto"/>
-                                    </div>
-                                </div>
-                                <div class="form-group mb-4">
-                                    <label for="inputDeskripsi" class="col-sm-4 control-label">Description</label>
-                                    <div class="col-sm-12">
-                                        <textarea class="ckeditor" name="deskripsi" required><?php echo $album_deskripsi;?></textarea>
-                                    </div>
-                                </div>
+                    <input type="hidden" name="kode" value="<?php echo $album_id;?>"/>
+                    <input type="hidden" value="<?php echo $album_cover;?>" name="gambar">
+                        <div class="form-group mb-4">
+                            <label for="inputUserName" class="col-sm-4 control-label">Album Name</label>
+                            <div class="col-sm-12">
+                                <input type="text" name="xnama_album" class="form-control" value="<?php echo $album_nama;?>" id="inputUserName" placeholder="Album Name" required>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="inputUserName" class="col-sm-4 control-label">Cover Album</label>
+                            <div class="col-sm-12">
+                                <input type="file" name="filefoto"/>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label class="col-sm-4 control-label">Show Home</label>
+                            <div class="col-sm-12">
+                              <input type="checkbox" name="show_home" value="1" <?php if($album_show_home==1)
+                              echo "checked";?>>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="inputDeskripsi" class="col-sm-4 control-label">Description</label>
+                            <div class="col-sm-12">
+                                <textarea class="ckeditor" name="deskripsi" required><?php echo $album_deskripsi;?></textarea>
+                            </div>
+                        </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default btn-flat" data-bs-dismiss="modal">Close</button>

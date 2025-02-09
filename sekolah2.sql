@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 01, 2024 at 05:41 PM
+-- Generation Time: Feb 09, 2025 at 03:14 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -290,7 +290,9 @@ INSERT INTO `tbl_absen` (`id`, `tipe`, `nama`, `kelas`, `jurusan`, `tanggal`, `w
 (255, 'guru', '', NULL, NULL, '20220321', '173638'),
 (256, 'guru', '', NULL, NULL, '20220321', '173639'),
 (257, 'siswa', '', '', '', '20220321', '173641'),
-(258, 'siswa', '', '', '', '20220321', '173642');
+(258, 'siswa', '', '', '', '20220321', '173642'),
+(259, 'siswa', 'Name 1', 'Class 1', '', '20241103', '205400'),
+(260, 'siswa', 'Name 2', 'Class 2', '', '20241103', '205515');
 
 -- --------------------------------------------------------
 
@@ -336,25 +338,26 @@ CREATE TABLE `tbl_album` (
   `album_author` varchar(60) DEFAULT NULL,
   `album_count` int(11) DEFAULT 0,
   `album_cover` varchar(40) DEFAULT NULL,
-  `album_deskripsi` text DEFAULT NULL
+  `album_deskripsi` text DEFAULT NULL,
+  `show_home` int(2) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_album`
 --
 
-INSERT INTO `tbl_album` (`album_id`, `album_nama`, `album_tanggal`, `album_pengguna_id`, `album_author`, `album_count`, `album_cover`, `album_deskripsi`) VALUES
-(1, 'Lainnya', '2016-09-08 13:00:55', 1, 'Admin', 9, '826c9a9a5cc2af4d067eec7f72b5d470.jpg', NULL),
-(3, 'Ekstra Kulikuler', '2017-01-21 01:58:16', 1, 'Admin', 3, 'cce295c78a76743417bc2b665743602d.jpg', NULL),
-(4, 'Kegiatan Belajar Siswa', '2017-01-24 01:31:13', 1, 'Admin', 11, '660bcdae752574fc6d4cc9bf525ea17b.jpg', NULL),
-(6, 'Swab Antigen Oleh Guru dan Siswa SMK Al-Hadiriyah', '2022-02-22 01:22:33', 1, 'Admin', 0, 'c3a5651cf4725401707c801e05bcfabb.jpeg', '<p>Dalam upaya mencegah penyebaran virus Covid-19 di lingkungan sekolah, Yayasan Assa&#39;adatul Hadiriyah melakukan tes swab antigen kepada seluruh pendidik dan tenaga kependidikan di tingkatan sekolah baik&nbsp;SD, SMP, dan SMK. Tes swab antigen ini berkaitan dengan pemeriksaan berkala dan penerapan protokol kesehatan&nbsp;setelah melaksanakan Pembelajaran Tatap Muka (PTM).<br />\r\n<br />\r\nPelaksanaan tes swab antigen ini, disambut positif oleh guru dan siswa SMK Kesehatan Al-Hadiriyah. Hal ini ditunjukan dengan guru dan siswa SMK Kesehatan Al-Hadiriyah sebagai petugas tes swab antigen.<br />\r\n<br />\r\nSelain bertujuan untuk mengurangi tingkat penyebaran virus Covid-19 di lingkungan sekolah, kegiatan tes swab antigen memliki muatan pembelajaran kepada siswa SMK Kesehatan Al-Hadiriyah untuk meningkatkan pengetahuan dan kompetensi&nbsp;di bidang kesehatan khususnya dalam hal protokol kesehatan di masa pandemi.&nbsp;</p>\r\n'),
-(9, 'Uji Kompetensi Asisten Keperawatan Tahun 2022', '2022-03-01 01:59:14', 1, 'Admin', 1, 'c59d24d6c2ddb18d6bb3860e538096a7.jpg', '<p>Pada tanggal 14 - 17 Februari 2022, SMK Kesehatan Al-Hadiriyah mengadakan kegiatan uji kompetensi untuk siswa/i kelas XII Asisten Keperawatan. Kegiatan ini bertujuan untuk mengukur kemampuan&nbsp;pencapaian kompetensi siswa&nbsp;kompetensi keahlian yang di tempuh selama pembelajaran di kelas XII. Uji level dilaksanakan dalam bentuk ujian praktek yang menguji aspek sikap, pengetahuan dan keterampilan.<br />\r\n<br />\r\nPelaksanaan uji kompetensi di pandu oleh 2 asesor dari LSP yaitu Ns. Ainun Badriah, S.Kep dan Devi Eka Sakti, S.Kep. Kegiatan ini dilaksanakan secara luring dengan menerapkan protokol kesehatan secara ketat kepada&nbsp;seluruh peserta uji kompetensi. Uji kompetensi berlangsung mulai pukul 07.00 - 14.00 yang terbagi dalam 2 sesi pada setiap harinya.&nbsp;<br />\r\n<br />\r\nSemoga kegiatan Uji Kompetensi ini dapat meningkatkan pengetahuan dan keterampilan siswa/i SMK Kesehatan Al-Hadiriyah di bidang kesehatan khususnya sebagai Asisten Keperawatan sehingga dapat menjadi tenaga kesehatan yang berkualitas dan bermanfaat untuk masyarakat.&nbsp;</p>\r\n'),
-(10, 'Prakerin Kelas XI Asisten Keperawatan dan Farmasi Klinis', '2022-03-01 02:16:10', 1, 'Admin', 1, '1574e37b9e5da55e2f68e6dc01e5bf89.jpeg', '<p>Praktek kerja industri merupakan suatu kegiatan pangalaman belajar bagi peserta didik untuk mengembangkan kemampuan dalam memberikan pelayanan dasar keperawatan bagi siswa SMK kesehatan.Pendidikan sekolah Menengah Kejuruan dengan bidang studi keahlian kesehatan, kompetensi keperawatan mengikuti KTSP yang bertujuan memenuhi kebutuhan tenaga kesehatan yang terampil.</p>\r\n\r\n<p>Pengalaman praktek kerja industri membantu peserta didik mengembangkan pengetahuan dan keterampilan yang telah diperoleh di kelas pada situasi nyata sesuai dengan perkembangan ilmu dan teknologi saat ini.&nbsp;<br />\r\n<br />\r\nPraktek kerja industri bertujuan untuk meningkatkan kemampuan dan keterampilan peserta didik agar&nbsp;mampu memberikan pelayanan dasar keperawatan secara komprehensif dan mampu melakukan komunokasi terapeutikpada klien dan keluarga.</p>\r\n'),
-(11, 'Ujian Praktek Kewirausahaan', '2022-03-09 01:48:36', 1, 'Admin', 1, 'f48bb44b71744fc3f34aba1879bdaca4.jpeg', '<p>Ujian Praktek Kewirausahaan SMK Kesehatan Al-Hadiriyah di bimbing langsung oleh Ibu Pupus Mbajeng H.F, S.Pd selaku Guru Kewirausahaan di SMK Kesehatan Al-Hadiriyah. Para siswa di tugaskan untuk membuat Bucket Snack dengan berbagai macam variasi bucket.&nbsp;Harapan besar dilaksanakan kegiatan ini adalah agar siswa siswi mampu untuk berwirausaha dan melatih potensi yang ada.</p>\r\n'),
-(12, 'Ujian Praktek Tahfidz ', '2022-03-09 01:58:26', 1, 'Admin', 0, '83dcfc106276e939b36c3685cb22a501.jpeg', '<p>Hari kedua pelaksanaan ujian praktek kelas XII SMK Kesehatan Al-Hadiriyah, di isi dengan praktek Tahfidz sebagai implementasi dari kurikulum pesantren yang menjadi program unggulan SMK Kesehatan Al-Hadiriyah. Ujian Praktek Tahfidz di bimbing oleh Ust. Yusup Somantri, Lc dengan target siswa mampu menghafal minimal 2 Juz Al-Qur&#39;an. Harapan dengan adanya kegiatan ini,&nbsp;siswa SMK Kesehatan Al-Hadiriyah khususnya kelas XII Asisten Keperawatan mampu meningkatkan kualitas siswa di bidang keagamaan dan menjadi pondasi dasar ketika terjun di masyarakat khususnya dalam bidang kesehatan.</p>\r\n'),
-(13, 'PELAKSANAAN UJIAN SEKOLAH KELAS XII ASISTEN KEPERAWATAN TAHUN PELAJARAN 2021/2022', '2022-03-16 02:01:27', 1, 'Admin', 3, '9c75fb2f0a8b0fbd9b6e0e72dce6664c.jpeg', '<p>Pada tanggl 14 - 16 Maret 2022, SMK Kesehatan Al-Hadiriyah melaksanakan Ujian Sekolah untuk siswa kelas XII Asisten Keperawatan. Pelaksanaan ujian sekolah menjadi salah satu faktor penting untuk melakukan penilaian&nbsp;terhadap pencapaian standar kompetensi lulusan (SKL). Ujian sekolah menjadi hak sekolah dalam pelaksanaannya yang seseuai dengan peraturan ujian sekolah yang telah ditetapkan.</p>\r\n\r\n<p>Proses pelaksanaan ujian sekolah SMK Kesehatan Al-Hadiriyah menggunakan metode blanded learning. Panitia telah menyiapkan soal dalam format online menggunakan aplikasi sehingga siswa kelas XII bisa mengerjakan soal-soal tersebut dengan menggunakan handphone masing-masing dengan fasilitas wifi di setiap ruang kelas.&nbsp;</p>\r\n\r\n<p>Dalam pelaksanaan ujian sekolah ini, setiap kelas terdapat 1 Guru yang bertugas mengawasi siswa dalam mengisi soal-soal ujian sekolah. Hal ini dilakukan agar pelaksanaan ujian sekolah dapat berjalan dengan nyaman dan kondusif sehingga siswa bisa fokus dalam mengerjakan soal-soal ujian.</p>\r\n\r\n<p>Meskipun saat ini masih dalam suasana pandemi covid, alhamdulillah pelaksanaan ujian sekolah dapat dilaksanakan secara luring dengan selalu menerapkan 3M (mencuci tangan, memakai masker, dan menjaga jarak). Semoga dengan adanya ujian sekolah ini mampu meningkatkan pengetahuan siswa kelas XII selama belajar di SMK Kesehatan Al-Hadiriyah sehingga menjadi lulusan yang memiliki kualitas intelektual dalam bidang kesehatan.</p>\r\n'),
-(14, 'Marhaban Ya Ramadhan 1443 H - SMK Kesehatan Al-Hadiriyah', '2022-04-03 00:59:21', 1, 'Admin', 1, '1d8a7e95ee3d806b8233a473b1a9553e.jpeg', '<p>Hasil sidang isbat pada tanggal 02 April 2022, Kementrian Agama Republik Indonesia menetapkan bahwa bulan suci Ramadhan 1443 H jatuh pada tanggal 03 April 2022. Maka dari itu, kami segenap keluarga besar SMK Kesehtan Al-Hadiriyah mengucapkan &quot;Selamat Menunaikan Ibadah Puasa di bulan Ramadhan 1443 H&quot;.<br />\r\n<br />\r\nSemoga di bulan yang penuh dengan keberkahan ini, kita dapat memaksimalkan ibadah kita sebagai wujud momentum untuk meningkatkan kualitas keimanan dan ketakwaan kita kepada Allah SWT. Dan semoga kita senantiasa diberikan kesehatan, keselamatan, dan keberkahan oleh Allah SWT.&nbsp;<br />\r\n<br />\r\nMarhaban Ya Ramadhan 1443 H</p>\r\n'),
-(16, '1', '2024-08-10 15:20:25', 1, 'Admin', 1, 'aa9ca99e753cfaeee874829c08aabbfe.png', '<p>1</p>\r\n');
+INSERT INTO `tbl_album` (`album_id`, `album_nama`, `album_tanggal`, `album_pengguna_id`, `album_author`, `album_count`, `album_cover`, `album_deskripsi`, `show_home`) VALUES
+(1, 'Lainnya', '2016-09-08 13:00:55', 1, 'Admin', 9, '826c9a9a5cc2af4d067eec7f72b5d470.jpg', '', 0),
+(3, 'Ekstra Kulikuler', '2017-01-21 01:58:16', 1, 'Admin', 3, 'cce295c78a76743417bc2b665743602d.jpg', '', 1),
+(4, 'Kegiatan Belajar Siswa', '2017-01-24 01:31:13', 1, 'Admin', 11, '660bcdae752574fc6d4cc9bf525ea17b.jpg', '', 1),
+(6, 'Swab Antigen Oleh Guru dan Siswa SMK Al-Hadiriyah', '2022-02-22 01:22:33', 1, 'Admin', 0, 'c3a5651cf4725401707c801e05bcfabb.jpeg', '<p>Dalam upaya mencegah penyebaran virus Covid-19 di lingkungan sekolah, Yayasan Assa&#39;adatul Hadiriyah melakukan tes swab antigen kepada seluruh pendidik dan tenaga kependidikan di tingkatan sekolah baik&nbsp;SD, SMP, dan SMK. Tes swab antigen ini berkaitan dengan pemeriksaan berkala dan penerapan protokol kesehatan&nbsp;setelah melaksanakan Pembelajaran Tatap Muka (PTM).<br />\r\n<br />\r\nPelaksanaan tes swab antigen ini, disambut positif oleh guru dan siswa SMK Kesehatan Al-Hadiriyah. Hal ini ditunjukan dengan guru dan siswa SMK Kesehatan Al-Hadiriyah sebagai petugas tes swab antigen.<br />\r\n<br />\r\nSelain bertujuan untuk mengurangi tingkat penyebaran virus Covid-19 di lingkungan sekolah, kegiatan tes swab antigen memliki muatan pembelajaran kepada siswa SMK Kesehatan Al-Hadiriyah untuk meningkatkan pengetahuan dan kompetensi&nbsp;di bidang kesehatan khususnya dalam hal protokol kesehatan di masa pandemi.&nbsp;</p>\r\n', 0),
+(9, 'Uji Kompetensi Asisten Keperawatan Tahun 2022', '2022-03-01 01:59:14', 1, 'Admin', 1, 'c59d24d6c2ddb18d6bb3860e538096a7.jpg', '<p>Pada tanggal 14 - 17 Februari 2022, SMK Kesehatan Al-Hadiriyah mengadakan kegiatan uji kompetensi untuk siswa/i kelas XII Asisten Keperawatan. Kegiatan ini bertujuan untuk mengukur kemampuan&nbsp;pencapaian kompetensi siswa&nbsp;kompetensi keahlian yang di tempuh selama pembelajaran di kelas XII. Uji level dilaksanakan dalam bentuk ujian praktek yang menguji aspek sikap, pengetahuan dan keterampilan.<br />\r\n<br />\r\nPelaksanaan uji kompetensi di pandu oleh 2 asesor dari LSP yaitu Ns. Ainun Badriah, S.Kep dan Devi Eka Sakti, S.Kep. Kegiatan ini dilaksanakan secara luring dengan menerapkan protokol kesehatan secara ketat kepada&nbsp;seluruh peserta uji kompetensi. Uji kompetensi berlangsung mulai pukul 07.00 - 14.00 yang terbagi dalam 2 sesi pada setiap harinya.&nbsp;<br />\r\n<br />\r\nSemoga kegiatan Uji Kompetensi ini dapat meningkatkan pengetahuan dan keterampilan siswa/i SMK Kesehatan Al-Hadiriyah di bidang kesehatan khususnya sebagai Asisten Keperawatan sehingga dapat menjadi tenaga kesehatan yang berkualitas dan bermanfaat untuk masyarakat.&nbsp;</p>\r\n', 0),
+(10, 'Prakerin Kelas XI Asisten Keperawatan dan Farmasi Klinis', '2022-03-01 02:16:10', 1, 'Admin', 1, '1574e37b9e5da55e2f68e6dc01e5bf89.jpeg', '<p>Praktek kerja industri merupakan suatu kegiatan pangalaman belajar bagi peserta didik untuk mengembangkan kemampuan dalam memberikan pelayanan dasar keperawatan bagi siswa SMK kesehatan.Pendidikan sekolah Menengah Kejuruan dengan bidang studi keahlian kesehatan, kompetensi keperawatan mengikuti KTSP yang bertujuan memenuhi kebutuhan tenaga kesehatan yang terampil.</p>\r\n\r\n<p>Pengalaman praktek kerja industri membantu peserta didik mengembangkan pengetahuan dan keterampilan yang telah diperoleh di kelas pada situasi nyata sesuai dengan perkembangan ilmu dan teknologi saat ini.&nbsp;<br />\r\n<br />\r\nPraktek kerja industri bertujuan untuk meningkatkan kemampuan dan keterampilan peserta didik agar&nbsp;mampu memberikan pelayanan dasar keperawatan secara komprehensif dan mampu melakukan komunokasi terapeutikpada klien dan keluarga.</p>\r\n', 0),
+(11, 'Ujian Praktek Kewirausahaan', '2022-03-09 01:48:36', 1, 'Admin', 1, 'f48bb44b71744fc3f34aba1879bdaca4.jpeg', '<p>Ujian Praktek Kewirausahaan SMK Kesehatan Al-Hadiriyah di bimbing langsung oleh Ibu Pupus Mbajeng H.F, S.Pd selaku Guru Kewirausahaan di SMK Kesehatan Al-Hadiriyah. Para siswa di tugaskan untuk membuat Bucket Snack dengan berbagai macam variasi bucket.&nbsp;Harapan besar dilaksanakan kegiatan ini adalah agar siswa siswi mampu untuk berwirausaha dan melatih potensi yang ada.</p>\r\n', 0),
+(12, 'Ujian Praktek Tahfidz ', '2022-03-09 01:58:26', 1, 'Admin', 0, '83dcfc106276e939b36c3685cb22a501.jpeg', '<p>Hari kedua pelaksanaan ujian praktek kelas XII SMK Kesehatan Al-Hadiriyah, di isi dengan praktek Tahfidz sebagai implementasi dari kurikulum pesantren yang menjadi program unggulan SMK Kesehatan Al-Hadiriyah. Ujian Praktek Tahfidz di bimbing oleh Ust. Yusup Somantri, Lc dengan target siswa mampu menghafal minimal 2 Juz Al-Qur&#39;an. Harapan dengan adanya kegiatan ini,&nbsp;siswa SMK Kesehatan Al-Hadiriyah khususnya kelas XII Asisten Keperawatan mampu meningkatkan kualitas siswa di bidang keagamaan dan menjadi pondasi dasar ketika terjun di masyarakat khususnya dalam bidang kesehatan.</p>\r\n', 0),
+(13, 'PELAKSANAAN UJIAN SEKOLAH KELAS XII ASISTEN KEPERAWATAN TAHUN PELAJARAN 2021/2022', '2022-03-16 02:01:27', 1, 'Admin', 3, '9c75fb2f0a8b0fbd9b6e0e72dce6664c.jpeg', '<p>Pada tanggl 14 - 16 Maret 2022, SMK Kesehatan Al-Hadiriyah melaksanakan Ujian Sekolah untuk siswa kelas XII Asisten Keperawatan. Pelaksanaan ujian sekolah menjadi salah satu faktor penting untuk melakukan penilaian&nbsp;terhadap pencapaian standar kompetensi lulusan (SKL). Ujian sekolah menjadi hak sekolah dalam pelaksanaannya yang seseuai dengan peraturan ujian sekolah yang telah ditetapkan.</p>\r\n\r\n<p>Proses pelaksanaan ujian sekolah SMK Kesehatan Al-Hadiriyah menggunakan metode blanded learning. Panitia telah menyiapkan soal dalam format online menggunakan aplikasi sehingga siswa kelas XII bisa mengerjakan soal-soal tersebut dengan menggunakan handphone masing-masing dengan fasilitas wifi di setiap ruang kelas.&nbsp;</p>\r\n\r\n<p>Dalam pelaksanaan ujian sekolah ini, setiap kelas terdapat 1 Guru yang bertugas mengawasi siswa dalam mengisi soal-soal ujian sekolah. Hal ini dilakukan agar pelaksanaan ujian sekolah dapat berjalan dengan nyaman dan kondusif sehingga siswa bisa fokus dalam mengerjakan soal-soal ujian.</p>\r\n\r\n<p>Meskipun saat ini masih dalam suasana pandemi covid, alhamdulillah pelaksanaan ujian sekolah dapat dilaksanakan secara luring dengan selalu menerapkan 3M (mencuci tangan, memakai masker, dan menjaga jarak). Semoga dengan adanya ujian sekolah ini mampu meningkatkan pengetahuan siswa kelas XII selama belajar di SMK Kesehatan Al-Hadiriyah sehingga menjadi lulusan yang memiliki kualitas intelektual dalam bidang kesehatan.</p>\r\n', 0),
+(14, 'Marhaban Ya Ramadhan 1443 H - SMK Kesehatan Al-Hadiriyah', '2022-04-03 00:59:21', 1, 'Admin', 1, '1d8a7e95ee3d806b8233a473b1a9553e.jpeg', '<p>Hasil sidang isbat pada tanggal 02 April 2022, Kementrian Agama Republik Indonesia menetapkan bahwa bulan suci Ramadhan 1443 H jatuh pada tanggal 03 April 2022. Maka dari itu, kami segenap keluarga besar SMK Kesehtan Al-Hadiriyah mengucapkan &quot;Selamat Menunaikan Ibadah Puasa di bulan Ramadhan 1443 H&quot;.<br />\r\n<br />\r\nSemoga di bulan yang penuh dengan keberkahan ini, kita dapat memaksimalkan ibadah kita sebagai wujud momentum untuk meningkatkan kualitas keimanan dan ketakwaan kita kepada Allah SWT. Dan semoga kita senantiasa diberikan kesehatan, keselamatan, dan keberkahan oleh Allah SWT.&nbsp;<br />\r\n<br />\r\nMarhaban Ya Ramadhan 1443 H</p>\r\n', 0),
+(16, '1', '2024-08-10 15:20:25', 1, 'Admin', 1, 'aa9ca99e753cfaeee874829c08aabbfe.png', '<p>1</p>\r\n', 0);
 
 -- --------------------------------------------------------
 
@@ -1814,7 +1817,13 @@ INSERT INTO `tbl_pengunjung` (`pengunjung_id`, `pengunjung_tanggal`, `pengunjung
 (1989, '2024-09-20 17:03:17', '127.0.0.1', 'Chrome'),
 (1990, '2024-09-23 15:43:46', '127.0.0.1', 'Chrome'),
 (1991, '2024-09-24 15:19:51', '127.0.0.1', 'Chrome'),
-(1992, '2024-09-28 14:24:40', '127.0.0.1', 'Chrome');
+(1992, '2024-09-28 14:24:40', '127.0.0.1', 'Chrome'),
+(1993, '2024-10-01 15:48:41', '127.0.0.1', 'Chrome'),
+(1994, '2024-11-03 13:06:26', '127.0.0.1', 'Chrome'),
+(1995, '2024-12-16 15:54:53', '127.0.0.1', 'Chrome'),
+(1996, '2024-12-30 17:10:10', '127.0.0.1', 'Chrome'),
+(1997, '2025-02-08 08:55:30', '127.0.0.1', 'Chrome'),
+(1998, '2025-02-09 10:33:29', '127.0.0.1', 'Chrome');
 
 -- --------------------------------------------------------
 
@@ -2109,7 +2118,7 @@ ALTER TABLE `tbl_youtube`
 -- AUTO_INCREMENT for table `tbl_absen`
 --
 ALTER TABLE `tbl_absen`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=259;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=261;
 
 --
 -- AUTO_INCREMENT for table `tbl_agenda`
@@ -2205,7 +2214,7 @@ ALTER TABLE `tbl_pengumuman`
 -- AUTO_INCREMENT for table `tbl_pengunjung`
 --
 ALTER TABLE `tbl_pengunjung`
-  MODIFY `pengunjung_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1993;
+  MODIFY `pengunjung_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1999;
 
 --
 -- AUTO_INCREMENT for table `tbl_setup`

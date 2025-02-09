@@ -31,6 +31,12 @@ class Home extends CI_Controller{
 		$x['youtube2']=$this->m_youtube->get_youtube2();
 		$x['faq']=$this->m_faq->get_faq_home();
 		$x['album']=$this->m_album->get_album_home();
+		$x['album2']=$this->m_album->get_galeri_show_home();
+		$i=1; 
+		foreach ($this->m_album->get_galeri_show_home()->result() as $row) :
+			$x["galeri$i"]=$this->m_galeri->get_galeri_by_album_id($row->album_id);
+		$i++; 
+		endforeach;
 		$judul_website=$x['setup']->judul_website;
 		//$this->load->view('depan/v_home',$x);
 		$x['title']="$judul_website | Home";

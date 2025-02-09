@@ -32,7 +32,7 @@
 							<div class="mb-n10 mb-lg-n20 z-index-0">
 								<div class="bgi-no-repeat bgi-size-contain bgi-position-x-center bgi-position-y-bottom landing-dark-bg" style="background-image: url(<?php echo base_url().'assets/metronic/media/svg/illustrations/landing.svg'?>)">
 									<!--begin::Container-->
-									<div class="container" style="margin-top:-50px;padding-bottom:600px;)">
+									<div class="container" style="margin-top:-50px;padding-bottom:70%;)">
 										<!--begin::Product slider-->
 										<div id="next" alt="Next" title="Next">
 											<div class="arrow-right"></div>
@@ -43,11 +43,11 @@
 										<div id="slider">				
 											<?php $i=1; foreach ($galeri_slider->result() as $row) : ?>
 												<div class="slide">
+													<div class="img"><img src="<?php echo base_url().'assets/images/'.$row->galeri_gambar;?>" class="imgslide"></div>
 													<div class="slide-copy">
 														<h2 style="color:#fff;"><?php echo $row->galeri_judul;?></h2>
 														<p></p>
 													</div>
-													<div class="img"><img src="<?php echo base_url().'assets/images/'.$row->galeri_gambar;?>" class="imgslide"></div>
 												</div>
 											<?php $i++; endforeach;?>
 										</div>
@@ -203,7 +203,57 @@
 								<!--end::Col-->
 							</div>
 							<!--end::Row-->
-
+							
+							<?php $i=1; foreach ($album2->result() as $row) : ?>
+							<!--begin::Row-->
+							<div class="row gy-5 g-xl-8">
+								<!--begin::Col-->
+								<div class="col-xxl-12">
+									<!--begin::List Widget 5-->
+									<div class="card card-xxl-stretch">
+										<!--begin::Team Section-->
+										<div class="py-10 py-lg-20">
+											<!--begin::Container-->
+											<div class="container">
+												<!--begin::Heading-->
+												<div class="text-center mb-12">
+													<!--begin::Title-->
+													<h3 class="fs-2hx text-dark mb-5" id="team" data-kt-scroll-offset="{default: 100, lg: 150}"><?php echo $row->album_nama;?></h3>
+													<!--end::Title-->
+												</div>
+												<!--end::Heading-->
+													<!--begin::Row-->
+													<div class="row g-10 row-cols-2 row-cols-lg-5">
+														<?php foreach (${'galeri'.$i}->result() as $row) : ?>
+															<!--begin::Col-->
+															<div class="col">
+																<!--begin::Overlay-->
+																<a class="d-block overlay" data-fslightbox="lightbox-hot-sales" data-magnify="gallery" data-caption="<?php echo $row->galeri_judul;?>" href="<?php echo base_url().'assets/images/'.$row->galeri_gambar;?>">
+																	<!--begin::Image-->
+																	<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px" style="background-image:url('<?php echo base_url().'assets/images/'.$row->galeri_gambar;?>')"></div>
+																	<!--end::Image-->
+																	<!--begin::Action-->
+																	<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+																		<i class="bi bi-eye-fill fs-2x text-white"></i>
+																	</div>
+																	<!--end::Action-->
+																</a>
+															</div>
+															<!--end::Col-->
+														<?php endforeach;?>
+													</div>
+													<!--begin::Row-->
+											</div>
+											<!--end::Container-->
+										</div>
+										<!--end::Team Section-->
+									</div>
+									<!--end: List Widget 5-->									
+								</div>
+								<!--end::Col-->
+							</div>
+							<!--end::Row-->
+							<?php $i++; endforeach;?>
 							
 							<!--begin::Row-->
 							<div class="row gy-5 g-xl-8">
@@ -267,6 +317,7 @@
 								<!--end::Col-->
 							</div>
 							<!--end::Row-->
+
 							<!--begin::Statistics Section-->
 							<div class="mt-sm-n10">
 								<!--begin::Curve top-->
@@ -454,6 +505,7 @@
 								<!--end::Curve bottom-->
 							</div>
 							<!--end::Statistics Section-->
+
 							<!--begin::Row-->
 							<div class="row gy-5 g-xl-8">
 								<!--begin::Col-->

@@ -158,9 +158,9 @@ p{
 
 #slider{
 	width:100%;
-	height:450px;
+	height:100%;
 	position:relative;
-	overflow:hidden;
+	/* overflow:hidden; */
 	float:left;
 	padding:0;
 	border:#666 solid 2px;
@@ -169,7 +169,7 @@ p{
 
 #slider img{
 	width:100%;
-	height:450px;
+	height:100%;
 }
 
 .img1, .img2, .img3, .img4, .img5 {
@@ -207,13 +207,13 @@ p{
 
 .slide-copy{
 	position:absolute;
-	bottom:0;
+	top:100%;
 	left:0;
 	padding:10px 20px 20px 20px;
 	background:7f7f7f;
 	background: rgba(0,0,0,0.5);
 	width:100%;
-	max-height:32%;
+	max-height:40px;
 }
 
 #prev, #next{
@@ -509,9 +509,9 @@ p{
 										<h4 class="fw-bolder text-gray-400 mb-6">Stay Connected</h4>
 										<!--end::Subtitle-->
 										<!--begin::Link-->
-										<a href="https://www.facebook.com/<?php echo $setup->facebook;?>" target="_blank" class="mb-6">
-											<img src="<?php echo base_url().'assets/metronic/media/svg/brand-logos/facebook-4.svg'?>" class="h-20px me-2" alt="" />
-											<span class="text-white opacity-50 text-hover-primary fs-5 mb-6">Facebook</span>
+										<a href="<?php echo $setup->formpendaftaran;?>" target="_blank" class="mb-6">
+											<img src="<?php echo base_url().'assets/metronic/media/svg/files/pdf.svg'?>" class="h-20px me-2" alt="" />
+											<span class="text-white opacity-50 text-hover-primary fs-5 mb-6">Addmission</span>
 										</a>
 										<!--end::Link-->
 										<!--begin::Link-->
@@ -566,8 +566,8 @@ p{
 		<!--end::Root-->
 		<!--begin::Drawers-->
 		<!--begin::Exolore drawer toggle-->
-		<a href="https://www.facebook.com/<?php echo $setup->facebook;?>" target="_blank" class="explore-toggle btn btn-sm bg-body btn-color-gray-700 btn-active-primary shadow-sm position-fixed px-5 fw-bolder zindex-2 mt-10 end-0 fs-6 rounded-left-0" title="Facebook" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" style="top: 42%!important;">
-			<img src="<?php echo base_url().'assets/metronic/media/svg/brand-logos/facebook-4.svg'?>" class="h-30px" alt="" />
+		<a href="<?php echo $setup->formpendaftaran;?>" target="_blank" class="explore-toggle btn btn-sm bg-body btn-color-gray-700 btn-active-primary shadow-sm position-fixed px-5 fw-bolder zindex-2 mt-10 end-0 fs-6 rounded-left-0" title="Addmission" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" style="top: 42%!important;">
+			<img src="<?php echo base_url().'assets/metronic/media/svg/files/pdf.svg'?>" class="h-30px" alt="" />
 		</a>
 		<!--end::Exolore drawer toggle-->
 		<!--begin::Exolore drawer toggle-->
