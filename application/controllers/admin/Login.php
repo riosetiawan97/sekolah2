@@ -17,7 +17,6 @@ class Login extends CI_Controller{
         $u=$username;
         $p=$password;
         $cadmin=$this->m_login->cekadmin($u,$p);
-        echo json_encode($cadmin);
         if($cadmin->num_rows() > 0){
          $this->session->set_userdata('masuk',true);
          $this->session->set_userdata('user',$u);
